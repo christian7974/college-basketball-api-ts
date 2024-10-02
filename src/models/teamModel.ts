@@ -8,6 +8,10 @@ const teamSchema = mongoose.Schema({
         type: String,
         required: [true, "Every team must have a name"]
     },
+    school_id: {
+        type: String,
+        required: [true, "Every team must have a name"]
+    },
     // points per game
     games: {
         type: Number

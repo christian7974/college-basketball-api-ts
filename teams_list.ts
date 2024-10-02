@@ -1,7 +1,7 @@
 const teamsList = [
     {
         "school_name": "Abilene Christian",
-        "school_id": "abilene-christian",
+        "school_id": "abilene%20christian",
         "g": 34.0,
         "wins": 16.0,
         "losses": 18.0,
@@ -36,7 +36,7 @@ const teamsList = [
     },
     {
         "school_name": "Air Force",
-        "school_id": "air-force",
+        "school_id": "air%20force",
         "g": 31.0,
         "wins": 9.0,
         "losses": 22.0,
@@ -141,7 +141,7 @@ const teamsList = [
     },
     {
         "school_name": "Alabama A&M",
-        "school_id": "alabama-am",
+        "school_id": "alabama%20a%26m",
         "g": 35.0,
         "wins": 12.0,
         "losses": 23.0,
@@ -176,7 +176,7 @@ const teamsList = [
     },
     {
         "school_name": "Alabama State",
-        "school_id": "alabama-state",
+        "school_id": "alabama%20state",
         "g": 32.0,
         "wins": 13.0,
         "losses": 19.0,
@@ -210,8 +210,8 @@ const teamsList = [
         "pf": 609.0
     },
     {
-        "school_name": "Albany Ny",
-        "school_id": "albany-ny",
+        "school_name": "Albany (NY)",
+        "school_id": "albany%20%28ny%29",
         "g": 32.0,
         "wins": 13.0,
         "losses": 19.0,
@@ -246,7 +246,7 @@ const teamsList = [
     },
     {
         "school_name": "Alcorn State",
-        "school_id": "alcorn-state",
+        "school_id": "alcorn%20state",
         "g": 32.0,
         "wins": 14.0,
         "losses": 18.0,
@@ -316,7 +316,7 @@ const teamsList = [
     },
     {
         "school_name": "Appalachian State",
-        "school_id": "appalachian-state",
+        "school_id": "appalachian%20state",
         "g": 34.0,
         "wins": 27.0,
         "losses": 7.0,
@@ -386,7 +386,7 @@ const teamsList = [
     },
     {
         "school_name": "Arizona State",
-        "school_id": "arizona-state",
+        "school_id": "arizona%20state",
         "g": 32.0,
         "wins": 14.0,
         "losses": 18.0,
@@ -456,7 +456,7 @@ const teamsList = [
     },
     {
         "school_name": "Arkansas State",
-        "school_id": "arkansas-state",
+        "school_id": "arkansas%20state",
         "g": 37.0,
         "wins": 20.0,
         "losses": 17.0,
@@ -491,7 +491,7 @@ const teamsList = [
     },
     {
         "school_name": "Arkansas-Pine Bluff",
-        "school_id": "arkansas-pine-bluff",
+        "school_id": "arkansas-pine%20bluff",
         "g": 31.0,
         "wins": 13.0,
         "losses": 18.0,
@@ -596,7 +596,7 @@ const teamsList = [
     },
     {
         "school_name": "Austin Peay",
-        "school_id": "austin-peay",
+        "school_id": "austin%20peay",
         "g": 35.0,
         "wins": 19.0,
         "losses": 16.0,
@@ -631,7 +631,7 @@ const teamsList = [
     },
     {
         "school_name": "Ball State",
-        "school_id": "ball-state",
+        "school_id": "ball%20state",
         "g": 31.0,
         "wins": 15.0,
         "losses": 16.0,
@@ -841,7 +841,7 @@ const teamsList = [
     },
     {
         "school_name": "Boise State",
-        "school_id": "boise-state",
+        "school_id": "boise%20state",
         "g": 33.0,
         "wins": 22.0,
         "losses": 11.0,
@@ -876,7 +876,7 @@ const teamsList = [
     },
     {
         "school_name": "Boston College",
-        "school_id": "boston-college",
+        "school_id": "boston%20college",
         "g": 36.0,
         "wins": 20.0,
         "losses": 16.0,
@@ -911,7 +911,7 @@ const teamsList = [
     },
     {
         "school_name": "Boston University",
-        "school_id": "boston-university",
+        "school_id": "boston%20university",
         "g": 33.0,
         "wins": 16.0,
         "losses": 17.0,
@@ -946,7 +946,7 @@ const teamsList = [
     },
     {
         "school_name": "Bowling Green State",
-        "school_id": "bowling-green-state",
+        "school_id": "bowling%20green%20state",
         "g": 34.0,
         "wins": 20.0,
         "losses": 14.0,
@@ -1016,7 +1016,7 @@ const teamsList = [
     },
     {
         "school_name": "Brigham Young",
-        "school_id": "brigham-young",
+        "school_id": "brigham%20young",
         "g": 34.0,
         "wins": 23.0,
         "losses": 11.0,
@@ -1226,7 +1226,7 @@ const teamsList = [
     },
     {
         "school_name": "Cal Poly",
-        "school_id": "cal-poly",
+        "school_id": "cal%20poly",
         "g": 32.0,
         "wins": 4.0,
         "losses": 28.0,
@@ -1261,7 +1261,7 @@ const teamsList = [
     },
     {
         "school_name": "Cal State Bakersfield",
-        "school_id": "cal-state-bakersfield",
+        "school_id": "cal%20state%20bakersfield",
         "g": 32.0,
         "wins": 13.0,
         "losses": 19.0,
@@ -1296,7 +1296,7 @@ const teamsList = [
     },
     {
         "school_name": "Cal State Fullerton",
-        "school_id": "cal-state-fullerton",
+        "school_id": "cal%20state%20fullerton",
         "g": 32.0,
         "wins": 14.0,
         "losses": 18.0,
@@ -1331,7 +1331,7 @@ const teamsList = [
     },
     {
         "school_name": "Cal State Northridge",
-        "school_id": "cal-state-northridge",
+        "school_id": "cal%20state%20northridge",
         "g": 34.0,
         "wins": 19.0,
         "losses": 15.0,
@@ -1401,7 +1401,7 @@ const teamsList = [
     },
     {
         "school_name": "California Baptist",
-        "school_id": "california-baptist",
+        "school_id": "california%20baptist",
         "g": 33.0,
         "wins": 16.0,
         "losses": 17.0,
@@ -1506,7 +1506,7 @@ const teamsList = [
     },
     {
         "school_name": "Central Arkansas",
-        "school_id": "central-arkansas",
+        "school_id": "central%20arkansas",
         "g": 32.0,
         "wins": 9.0,
         "losses": 23.0,
@@ -1541,7 +1541,7 @@ const teamsList = [
     },
     {
         "school_name": "Central Connecticut State",
-        "school_id": "central-connecticut-state",
+        "school_id": "central%20connecticut%20state",
         "g": 31.0,
         "wins": 20.0,
         "losses": 11.0,
@@ -1576,7 +1576,7 @@ const teamsList = [
     },
     {
         "school_name": "Central Michigan",
-        "school_id": "central-michigan",
+        "school_id": "central%20michigan",
         "g": 32.0,
         "wins": 18.0,
         "losses": 14.0,
@@ -1611,7 +1611,7 @@ const teamsList = [
     },
     {
         "school_name": "Charleston Southern",
-        "school_id": "charleston-southern",
+        "school_id": "charleston%20southern",
         "g": 30.0,
         "wins": 10.0,
         "losses": 20.0,
@@ -1716,7 +1716,7 @@ const teamsList = [
     },
     {
         "school_name": "Chicago State",
-        "school_id": "chicago-state",
+        "school_id": "chicago%20state",
         "g": 32.0,
         "wins": 13.0,
         "losses": 19.0,
@@ -1821,7 +1821,7 @@ const teamsList = [
     },
     {
         "school_name": "Cleveland State",
-        "school_id": "cleveland-state",
+        "school_id": "cleveland%20state",
         "g": 36.0,
         "wins": 21.0,
         "losses": 15.0,
@@ -1856,7 +1856,7 @@ const teamsList = [
     },
     {
         "school_name": "Coastal Carolina",
-        "school_id": "coastal-carolina",
+        "school_id": "coastal%20carolina",
         "g": 31.0,
         "wins": 9.0,
         "losses": 22.0,
@@ -1925,8 +1925,8 @@ const teamsList = [
         "pf": 468.0
     },
     {
-        "school_name": "College Of Charleston",
-        "school_id": "college-of-charleston",
+        "school_name": "College of Charleston",
+        "school_id": "college%20of%20charleston",
         "g": 35.0,
         "wins": 27.0,
         "losses": 8.0,
@@ -1996,7 +1996,7 @@ const teamsList = [
     },
     {
         "school_name": "Colorado State",
-        "school_id": "colorado-state",
+        "school_id": "colorado%20state",
         "g": 36.0,
         "wins": 25.0,
         "losses": 11.0,
@@ -2101,7 +2101,7 @@ const teamsList = [
     },
     {
         "school_name": "Coppin State",
-        "school_id": "coppin-state",
+        "school_id": "coppin%20state",
         "g": 29.0,
         "wins": 2.0,
         "losses": 27.0,
@@ -2346,7 +2346,7 @@ const teamsList = [
     },
     {
         "school_name": "Delaware State",
-        "school_id": "delaware-state",
+        "school_id": "delaware%20state",
         "g": 34.0,
         "wins": 15.0,
         "losses": 19.0,
@@ -2415,7 +2415,7 @@ const teamsList = [
         "pf": 573.0
     },
     {
-        "school_name": "Depaul",
+        "school_name": "DePaul",
         "school_id": "depaul",
         "g": 32.0,
         "wins": 3.0,
@@ -2451,7 +2451,7 @@ const teamsList = [
     },
     {
         "school_name": "Detroit Mercy",
-        "school_id": "detroit-mercy",
+        "school_id": "detroit%20mercy",
         "g": 32.0,
         "wins": 1.0,
         "losses": 31.0,
@@ -2626,7 +2626,7 @@ const teamsList = [
     },
     {
         "school_name": "East Carolina",
-        "school_id": "east-carolina",
+        "school_id": "east%20carolina",
         "g": 33.0,
         "wins": 15.0,
         "losses": 18.0,
@@ -2661,7 +2661,7 @@ const teamsList = [
     },
     {
         "school_name": "East Tennessee State",
-        "school_id": "east-tennessee-state",
+        "school_id": "east%20tennessee%20state",
         "g": 35.0,
         "wins": 19.0,
         "losses": 16.0,
@@ -2696,7 +2696,7 @@ const teamsList = [
     },
     {
         "school_name": "Eastern Illinois",
-        "school_id": "eastern-illinois",
+        "school_id": "eastern%20illinois",
         "g": 32.0,
         "wins": 14.0,
         "losses": 18.0,
@@ -2731,7 +2731,7 @@ const teamsList = [
     },
     {
         "school_name": "Eastern Kentucky",
-        "school_id": "eastern-kentucky",
+        "school_id": "eastern%20kentucky",
         "g": 31.0,
         "wins": 17.0,
         "losses": 14.0,
@@ -2766,7 +2766,7 @@ const teamsList = [
     },
     {
         "school_name": "Eastern Michigan",
-        "school_id": "eastern-michigan",
+        "school_id": "eastern%20michigan",
         "g": 31.0,
         "wins": 13.0,
         "losses": 18.0,
@@ -2801,7 +2801,7 @@ const teamsList = [
     },
     {
         "school_name": "Eastern Washington",
-        "school_id": "eastern-washington",
+        "school_id": "eastern%20washington",
         "g": 32.0,
         "wins": 21.0,
         "losses": 11.0,
@@ -2940,7 +2940,7 @@ const teamsList = [
         "pf": 531.0
     },
     {
-        "school_name": "Fdu",
+        "school_name": "FDU",
         "school_id": "fdu",
         "g": 32.0,
         "wins": 15.0,
@@ -3011,7 +3011,7 @@ const teamsList = [
     },
     {
         "school_name": "Florida A&M",
-        "school_id": "florida-am",
+        "school_id": "florida%20a%26m",
         "g": 29.0,
         "wins": 6.0,
         "losses": 23.0,
@@ -3046,7 +3046,7 @@ const teamsList = [
     },
     {
         "school_name": "Florida Atlantic",
-        "school_id": "florida-atlantic",
+        "school_id": "florida%20atlantic",
         "g": 34.0,
         "wins": 25.0,
         "losses": 9.0,
@@ -3081,7 +3081,7 @@ const teamsList = [
     },
     {
         "school_name": "Florida Gulf Coast",
-        "school_id": "florida-gulf-coast",
+        "school_id": "florida%20gulf%20coast",
         "g": 32.0,
         "wins": 14.0,
         "losses": 18.0,
@@ -3116,7 +3116,7 @@ const teamsList = [
     },
     {
         "school_name": "Florida International",
-        "school_id": "florida-international",
+        "school_id": "florida%20international",
         "g": 33.0,
         "wins": 11.0,
         "losses": 22.0,
@@ -3151,7 +3151,7 @@ const teamsList = [
     },
     {
         "school_name": "Florida State",
-        "school_id": "florida-state",
+        "school_id": "florida%20state",
         "g": 33.0,
         "wins": 17.0,
         "losses": 16.0,
@@ -3221,7 +3221,7 @@ const teamsList = [
     },
     {
         "school_name": "Fresno State",
-        "school_id": "fresno-state",
+        "school_id": "fresno%20state",
         "g": 33.0,
         "wins": 12.0,
         "losses": 21.0,
@@ -3326,7 +3326,7 @@ const teamsList = [
     },
     {
         "school_name": "George Mason",
-        "school_id": "george-mason",
+        "school_id": "george%20mason",
         "g": 32.0,
         "wins": 20.0,
         "losses": 12.0,
@@ -3361,7 +3361,7 @@ const teamsList = [
     },
     {
         "school_name": "George Washington",
-        "school_id": "george-washington",
+        "school_id": "george%20washington",
         "g": 32.0,
         "wins": 15.0,
         "losses": 17.0,
@@ -3466,7 +3466,7 @@ const teamsList = [
     },
     {
         "school_name": "Georgia Southern",
-        "school_id": "georgia-southern",
+        "school_id": "georgia%20southern",
         "g": 33.0,
         "wins": 9.0,
         "losses": 24.0,
@@ -3501,7 +3501,7 @@ const teamsList = [
     },
     {
         "school_name": "Georgia State",
-        "school_id": "georgia-state",
+        "school_id": "georgia%20state",
         "g": 31.0,
         "wins": 14.0,
         "losses": 17.0,
@@ -3536,7 +3536,7 @@ const teamsList = [
     },
     {
         "school_name": "Georgia Tech",
-        "school_id": "georgia-tech",
+        "school_id": "georgia%20tech",
         "g": 32.0,
         "wins": 14.0,
         "losses": 18.0,
@@ -3641,7 +3641,7 @@ const teamsList = [
     },
     {
         "school_name": "Grand Canyon",
-        "school_id": "grand-canyon",
+        "school_id": "grand%20canyon",
         "g": 35.0,
         "wins": 30.0,
         "losses": 5.0,
@@ -3676,7 +3676,7 @@ const teamsList = [
     },
     {
         "school_name": "Green Bay",
-        "school_id": "green-bay",
+        "school_id": "green%20bay",
         "g": 32.0,
         "wins": 18.0,
         "losses": 14.0,
@@ -3816,7 +3816,7 @@ const teamsList = [
     },
     {
         "school_name": "High Point",
-        "school_id": "high-point",
+        "school_id": "high%20point",
         "g": 36.0,
         "wins": 27.0,
         "losses": 9.0,
@@ -3886,7 +3886,7 @@ const teamsList = [
     },
     {
         "school_name": "Holy Cross",
-        "school_id": "holy-cross",
+        "school_id": "holy%20cross",
         "g": 33.0,
         "wins": 10.0,
         "losses": 23.0,
@@ -3956,7 +3956,7 @@ const teamsList = [
     },
     {
         "school_name": "Houston Christian",
-        "school_id": "houston-christian",
+        "school_id": "houston%20christian",
         "g": 29.0,
         "wins": 6.0,
         "losses": 23.0,
@@ -4061,7 +4061,7 @@ const teamsList = [
     },
     {
         "school_name": "Idaho State",
-        "school_id": "idaho-state",
+        "school_id": "idaho%20state",
         "g": 34.0,
         "wins": 14.0,
         "losses": 20.0,
@@ -4131,7 +4131,7 @@ const teamsList = [
     },
     {
         "school_name": "Illinois State",
-        "school_id": "illinois-state",
+        "school_id": "illinois%20state",
         "g": 32.0,
         "wins": 15.0,
         "losses": 17.0,
@@ -4201,7 +4201,7 @@ const teamsList = [
     },
     {
         "school_name": "Incarnate Word",
-        "school_id": "incarnate-word",
+        "school_id": "incarnate%20word",
         "g": 31.0,
         "wins": 8.0,
         "losses": 23.0,
@@ -4271,7 +4271,7 @@ const teamsList = [
     },
     {
         "school_name": "Indiana State",
-        "school_id": "indiana-state",
+        "school_id": "indiana%20state",
         "g": 39.0,
         "wins": 32.0,
         "losses": 7.0,
@@ -4376,7 +4376,7 @@ const teamsList = [
     },
     {
         "school_name": "Iowa State",
-        "school_id": "iowa-state",
+        "school_id": "iowa%20state",
         "g": 37.0,
         "wins": 29.0,
         "losses": 8.0,
@@ -4410,8 +4410,8 @@ const teamsList = [
         "pf": 610.0
     },
     {
-        "school_name": "Iu Indy",
-        "school_id": "iu-indy",
+        "school_name": "IU Indy",
+        "school_id": "iu%20indy",
         "g": 32.0,
         "wins": 6.0,
         "losses": 26.0,
@@ -4446,7 +4446,7 @@ const teamsList = [
     },
     {
         "school_name": "Jackson State",
-        "school_id": "jackson-state",
+        "school_id": "jackson%20state",
         "g": 32.0,
         "wins": 15.0,
         "losses": 17.0,
@@ -4516,7 +4516,7 @@ const teamsList = [
     },
     {
         "school_name": "Jacksonville State",
-        "school_id": "jacksonville-state",
+        "school_id": "jacksonville%20state",
         "g": 32.0,
         "wins": 14.0,
         "losses": 18.0,
@@ -4551,7 +4551,7 @@ const teamsList = [
     },
     {
         "school_name": "James Madison",
-        "school_id": "james-madison",
+        "school_id": "james%20madison",
         "g": 36.0,
         "wins": 32.0,
         "losses": 4.0,
@@ -4621,7 +4621,7 @@ const teamsList = [
     },
     {
         "school_name": "Kansas City",
-        "school_id": "kansas-city",
+        "school_id": "kansas%20city",
         "g": 32.0,
         "wins": 16.0,
         "losses": 16.0,
@@ -4656,7 +4656,7 @@ const teamsList = [
     },
     {
         "school_name": "Kansas State",
-        "school_id": "kansas-state",
+        "school_id": "kansas%20state",
         "g": 34.0,
         "wins": 19.0,
         "losses": 15.0,
@@ -4691,7 +4691,7 @@ const teamsList = [
     },
     {
         "school_name": "Kennesaw State",
-        "school_id": "kennesaw-state",
+        "school_id": "kennesaw%20state",
         "g": 31.0,
         "wins": 15.0,
         "losses": 16.0,
@@ -4726,7 +4726,7 @@ const teamsList = [
     },
     {
         "school_name": "Kent State",
-        "school_id": "kent-state",
+        "school_id": "kent%20state",
         "g": 34.0,
         "wins": 17.0,
         "losses": 17.0,
@@ -4796,7 +4796,7 @@ const teamsList = [
     },
     {
         "school_name": "La Salle",
-        "school_id": "la-salle",
+        "school_id": "la%20salle",
         "g": 33.0,
         "wins": 16.0,
         "losses": 17.0,
@@ -4901,7 +4901,7 @@ const teamsList = [
     },
     {
         "school_name": "Le Moyne",
-        "school_id": "le-moyne",
+        "school_id": "le%20moyne",
         "g": 32.0,
         "wins": 15.0,
         "losses": 17.0,
@@ -5076,7 +5076,7 @@ const teamsList = [
     },
     {
         "school_name": "Little Rock",
-        "school_id": "little-rock",
+        "school_id": "little%20rock",
         "g": 34.0,
         "wins": 21.0,
         "losses": 13.0,
@@ -5111,7 +5111,7 @@ const teamsList = [
     },
     {
         "school_name": "Long Beach State",
-        "school_id": "long-beach-state",
+        "school_id": "long%20beach%20state",
         "g": 36.0,
         "wins": 21.0,
         "losses": 15.0,
@@ -5146,7 +5146,7 @@ const teamsList = [
     },
     {
         "school_name": "Long Island University",
-        "school_id": "long-island-university",
+        "school_id": "long%20island%20university",
         "g": 29.0,
         "wins": 7.0,
         "losses": 22.0,
@@ -5251,7 +5251,7 @@ const teamsList = [
     },
     {
         "school_name": "Louisiana State",
-        "school_id": "louisiana-state",
+        "school_id": "louisiana%20state",
         "g": 33.0,
         "wins": 17.0,
         "losses": 16.0,
@@ -5286,7 +5286,7 @@ const teamsList = [
     },
     {
         "school_name": "Louisiana Tech",
-        "school_id": "louisiana-tech",
+        "school_id": "louisiana%20tech",
         "g": 32.0,
         "wins": 22.0,
         "losses": 10.0,
@@ -5390,8 +5390,8 @@ const teamsList = [
         "pf": 544.0
     },
     {
-        "school_name": "Loyola Il",
-        "school_id": "loyola-il",
+        "school_name": "Loyola (IL)",
+        "school_id": "loyola%20%28il%29",
         "g": 33.0,
         "wins": 23.0,
         "losses": 10.0,
@@ -5425,8 +5425,8 @@ const teamsList = [
         "pf": 643.0
     },
     {
-        "school_name": "Loyola Md",
-        "school_id": "loyola-md",
+        "school_name": "Loyola (MD)",
+        "school_id": "loyola%20%28md%29",
         "g": 32.0,
         "wins": 7.0,
         "losses": 25.0,
@@ -5461,7 +5461,7 @@ const teamsList = [
     },
     {
         "school_name": "Loyola Marymount",
-        "school_id": "loyola-marymount",
+        "school_id": "loyola%20marymount",
         "g": 31.0,
         "wins": 12.0,
         "losses": 19.0,
@@ -5706,7 +5706,7 @@ const teamsList = [
     },
     {
         "school_name": "Maryland-Baltimore County",
-        "school_id": "maryland-baltimore-county",
+        "school_id": "maryland-baltimore%20county",
         "g": 32.0,
         "wins": 11.0,
         "losses": 21.0,
@@ -5741,7 +5741,7 @@ const teamsList = [
     },
     {
         "school_name": "Maryland-Eastern Shore",
-        "school_id": "maryland-eastern-shore",
+        "school_id": "maryland-eastern%20shore",
         "g": 29.0,
         "wins": 9.0,
         "losses": 20.0,
@@ -5845,8 +5845,8 @@ const teamsList = [
         "pf": 480.0
     },
     {
-        "school_name": "Mcneese State",
-        "school_id": "mcneese-state",
+        "school_name": "McNeese State",
+        "school_id": "mcneese%20state",
         "g": 34.0,
         "wins": 30.0,
         "losses": 4.0,
@@ -5985,8 +5985,8 @@ const teamsList = [
         "pf": 532.0
     },
     {
-        "school_name": "Miami Fl",
-        "school_id": "miami-fl",
+        "school_name": "Miami (FL)",
+        "school_id": "miami%20%28fl%29",
         "g": 32.0,
         "wins": 15.0,
         "losses": 17.0,
@@ -6020,8 +6020,8 @@ const teamsList = [
         "pf": 419.0
     },
     {
-        "school_name": "Miami Oh",
-        "school_id": "miami-oh",
+        "school_name": "Miami (OH)",
+        "school_id": "miami%20%28oh%29",
         "g": 32.0,
         "wins": 15.0,
         "losses": 17.0,
@@ -6091,7 +6091,7 @@ const teamsList = [
     },
     {
         "school_name": "Michigan State",
-        "school_id": "michigan-state",
+        "school_id": "michigan%20state",
         "g": 35.0,
         "wins": 20.0,
         "losses": 15.0,
@@ -6126,7 +6126,7 @@ const teamsList = [
     },
     {
         "school_name": "Middle Tennessee",
-        "school_id": "middle-tennessee",
+        "school_id": "middle%20tennessee",
         "g": 33.0,
         "wins": 14.0,
         "losses": 19.0,
@@ -6266,7 +6266,7 @@ const teamsList = [
     },
     {
         "school_name": "Mississippi State",
-        "school_id": "mississippi-state",
+        "school_id": "mississippi%20state",
         "g": 35.0,
         "wins": 21.0,
         "losses": 14.0,
@@ -6301,7 +6301,7 @@ const teamsList = [
     },
     {
         "school_name": "Mississippi Valley State",
-        "school_id": "mississippi-valley-state",
+        "school_id": "mississippi%20valley%20state",
         "g": 31.0,
         "wins": 1.0,
         "losses": 30.0,
@@ -6371,7 +6371,7 @@ const teamsList = [
     },
     {
         "school_name": "Missouri State",
-        "school_id": "missouri-state",
+        "school_id": "missouri%20state",
         "g": 33.0,
         "wins": 17.0,
         "losses": 16.0,
@@ -6476,7 +6476,7 @@ const teamsList = [
     },
     {
         "school_name": "Montana State",
-        "school_id": "montana-state",
+        "school_id": "montana%20state",
         "g": 35.0,
         "wins": 17.0,
         "losses": 18.0,
@@ -6511,7 +6511,7 @@ const teamsList = [
     },
     {
         "school_name": "Morehead State",
-        "school_id": "morehead-state",
+        "school_id": "morehead%20state",
         "g": 35.0,
         "wins": 26.0,
         "losses": 9.0,
@@ -6546,7 +6546,7 @@ const teamsList = [
     },
     {
         "school_name": "Morgan State",
-        "school_id": "morgan-state",
+        "school_id": "morgan%20state",
         "g": 31.0,
         "wins": 11.0,
         "losses": 20.0,
@@ -6580,8 +6580,8 @@ const teamsList = [
         "pf": 594.0
     },
     {
-        "school_name": "Mount St. Mary'S",
-        "school_id": "mount-st.-mary's",
+        "school_name": "Mount St. Mary's",
+        "school_id": "mount%20st.%20mary%27s",
         "g": 32.0,
         "wins": 13.0,
         "losses": 19.0,
@@ -6616,7 +6616,7 @@ const teamsList = [
     },
     {
         "school_name": "Murray State",
-        "school_id": "murray-state",
+        "school_id": "murray%20state",
         "g": 32.0,
         "wins": 12.0,
         "losses": 20.0,
@@ -6685,8 +6685,8 @@ const teamsList = [
         "pf": 559.0
     },
     {
-        "school_name": "Nc State",
-        "school_id": "nc-state",
+        "school_name": "NC State",
+        "school_id": "nc%20state",
         "g": 41.0,
         "wins": 26.0,
         "losses": 15.0,
@@ -6791,7 +6791,7 @@ const teamsList = [
     },
     {
         "school_name": "Nevada-Las Vegas",
-        "school_id": "nevada-las-vegas",
+        "school_id": "nevada-las%20vegas",
         "g": 34.0,
         "wins": 21.0,
         "losses": 13.0,
@@ -6826,7 +6826,7 @@ const teamsList = [
     },
     {
         "school_name": "New Hampshire",
-        "school_id": "new-hampshire",
+        "school_id": "new%20hampshire",
         "g": 31.0,
         "wins": 16.0,
         "losses": 15.0,
@@ -6861,7 +6861,7 @@ const teamsList = [
     },
     {
         "school_name": "New Mexico",
-        "school_id": "new-mexico",
+        "school_id": "new%20mexico",
         "g": 36.0,
         "wins": 26.0,
         "losses": 10.0,
@@ -6896,7 +6896,7 @@ const teamsList = [
     },
     {
         "school_name": "New Mexico State",
-        "school_id": "new-mexico-state",
+        "school_id": "new%20mexico%20state",
         "g": 32.0,
         "wins": 13.0,
         "losses": 19.0,
@@ -6931,7 +6931,7 @@ const teamsList = [
     },
     {
         "school_name": "New Orleans",
-        "school_id": "new-orleans",
+        "school_id": "new%20orleans",
         "g": 33.0,
         "wins": 10.0,
         "losses": 23.0,
@@ -7001,7 +7001,7 @@ const teamsList = [
     },
     {
         "school_name": "Nicholls State",
-        "school_id": "nicholls-state",
+        "school_id": "nicholls%20state",
         "g": 34.0,
         "wins": 20.0,
         "losses": 14.0,
@@ -7035,7 +7035,7 @@ const teamsList = [
         "pf": 636.0
     },
     {
-        "school_name": "Njit",
+        "school_name": "NJIT",
         "school_id": "njit",
         "g": 28.0,
         "wins": 7.0,
@@ -7071,7 +7071,7 @@ const teamsList = [
     },
     {
         "school_name": "Norfolk State",
-        "school_id": "norfolk-state",
+        "school_id": "norfolk%20state",
         "g": 35.0,
         "wins": 24.0,
         "losses": 11.0,
@@ -7106,7 +7106,7 @@ const teamsList = [
     },
     {
         "school_name": "North Alabama",
-        "school_id": "north-alabama",
+        "school_id": "north%20alabama",
         "g": 32.0,
         "wins": 15.0,
         "losses": 17.0,
@@ -7141,7 +7141,7 @@ const teamsList = [
     },
     {
         "school_name": "North Carolina",
-        "school_id": "north-carolina",
+        "school_id": "north%20carolina",
         "g": 37.0,
         "wins": 29.0,
         "losses": 8.0,
@@ -7176,7 +7176,7 @@ const teamsList = [
     },
     {
         "school_name": "North Carolina A&T",
-        "school_id": "north-carolina-at",
+        "school_id": "north%20carolina%20a%26t",
         "g": 32.0,
         "wins": 7.0,
         "losses": 25.0,
@@ -7211,7 +7211,7 @@ const teamsList = [
     },
     {
         "school_name": "North Carolina Central",
-        "school_id": "north-carolina-central",
+        "school_id": "north%20carolina%20central",
         "g": 31.0,
         "wins": 18.0,
         "losses": 13.0,
@@ -7246,7 +7246,7 @@ const teamsList = [
     },
     {
         "school_name": "North Dakota",
-        "school_id": "north-dakota",
+        "school_id": "north%20dakota",
         "g": 32.0,
         "wins": 18.0,
         "losses": 14.0,
@@ -7281,7 +7281,7 @@ const teamsList = [
     },
     {
         "school_name": "North Dakota State",
-        "school_id": "north-dakota-state",
+        "school_id": "north%20dakota%20state",
         "g": 32.0,
         "wins": 15.0,
         "losses": 17.0,
@@ -7316,7 +7316,7 @@ const teamsList = [
     },
     {
         "school_name": "North Florida",
-        "school_id": "north-florida",
+        "school_id": "north%20florida",
         "g": 32.0,
         "wins": 16.0,
         "losses": 16.0,
@@ -7351,7 +7351,7 @@ const teamsList = [
     },
     {
         "school_name": "North Texas",
-        "school_id": "north-texas",
+        "school_id": "north%20texas",
         "g": 34.0,
         "wins": 19.0,
         "losses": 15.0,
@@ -7421,7 +7421,7 @@ const teamsList = [
     },
     {
         "school_name": "Northern Arizona",
-        "school_id": "northern-arizona",
+        "school_id": "northern%20arizona",
         "g": 33.0,
         "wins": 14.0,
         "losses": 19.0,
@@ -7456,7 +7456,7 @@ const teamsList = [
     },
     {
         "school_name": "Northern Colorado",
-        "school_id": "northern-colorado",
+        "school_id": "northern%20colorado",
         "g": 33.0,
         "wins": 19.0,
         "losses": 14.0,
@@ -7491,7 +7491,7 @@ const teamsList = [
     },
     {
         "school_name": "Northern Illinois",
-        "school_id": "northern-illinois",
+        "school_id": "northern%20illinois",
         "g": 31.0,
         "wins": 11.0,
         "losses": 20.0,
@@ -7526,7 +7526,7 @@ const teamsList = [
     },
     {
         "school_name": "Northern Iowa",
-        "school_id": "northern-iowa",
+        "school_id": "northern%20iowa",
         "g": 33.0,
         "wins": 19.0,
         "losses": 14.0,
@@ -7561,7 +7561,7 @@ const teamsList = [
     },
     {
         "school_name": "Northern Kentucky",
-        "school_id": "northern-kentucky",
+        "school_id": "northern%20kentucky",
         "g": 33.0,
         "wins": 18.0,
         "losses": 15.0,
@@ -7631,7 +7631,7 @@ const teamsList = [
     },
     {
         "school_name": "Northwestern State",
-        "school_id": "northwestern-state",
+        "school_id": "northwestern%20state",
         "g": 32.0,
         "wins": 9.0,
         "losses": 23.0,
@@ -7666,7 +7666,7 @@ const teamsList = [
     },
     {
         "school_name": "Notre Dame",
-        "school_id": "notre-dame",
+        "school_id": "notre%20dame",
         "g": 33.0,
         "wins": 13.0,
         "losses": 20.0,
@@ -7771,7 +7771,7 @@ const teamsList = [
     },
     {
         "school_name": "Ohio State",
-        "school_id": "ohio-state",
+        "school_id": "ohio%20state",
         "g": 36.0,
         "wins": 22.0,
         "losses": 14.0,
@@ -7841,7 +7841,7 @@ const teamsList = [
     },
     {
         "school_name": "Oklahoma State",
-        "school_id": "oklahoma-state",
+        "school_id": "oklahoma%20state",
         "g": 32.0,
         "wins": 12.0,
         "losses": 20.0,
@@ -7876,7 +7876,7 @@ const teamsList = [
     },
     {
         "school_name": "Old Dominion",
-        "school_id": "old-dominion",
+        "school_id": "old%20dominion",
         "g": 32.0,
         "wins": 7.0,
         "losses": 25.0,
@@ -7946,7 +7946,7 @@ const teamsList = [
     },
     {
         "school_name": "Oral Roberts",
-        "school_id": "oral-roberts",
+        "school_id": "oral%20roberts",
         "g": 31.0,
         "wins": 12.0,
         "losses": 19.0,
@@ -8016,7 +8016,7 @@ const teamsList = [
     },
     {
         "school_name": "Oregon State",
-        "school_id": "oregon-state",
+        "school_id": "oregon%20state",
         "g": 32.0,
         "wins": 13.0,
         "losses": 19.0,
@@ -8086,7 +8086,7 @@ const teamsList = [
     },
     {
         "school_name": "Penn State",
-        "school_id": "penn-state",
+        "school_id": "penn%20state",
         "g": 33.0,
         "wins": 16.0,
         "losses": 17.0,
@@ -8261,7 +8261,7 @@ const teamsList = [
     },
     {
         "school_name": "Portland State",
-        "school_id": "portland-state",
+        "school_id": "portland%20state",
         "g": 32.0,
         "wins": 17.0,
         "losses": 15.0,
@@ -8296,7 +8296,7 @@ const teamsList = [
     },
     {
         "school_name": "Prairie View",
-        "school_id": "prairie-view",
+        "school_id": "prairie%20view",
         "g": 31.0,
         "wins": 10.0,
         "losses": 21.0,
@@ -8471,7 +8471,7 @@ const teamsList = [
     },
     {
         "school_name": "Purdue Fort Wayne",
-        "school_id": "purdue-fort-wayne",
+        "school_id": "purdue%20fort%20wayne",
         "g": 36.0,
         "wins": 23.0,
         "losses": 13.0,
@@ -8505,8 +8505,8 @@ const teamsList = [
         "pf": 612.0
     },
     {
-        "school_name": "Queens Nc",
-        "school_id": "queens-nc",
+        "school_name": "Queens (NC)",
+        "school_id": "queens%20%28nc%29",
         "g": 33.0,
         "wins": 14.0,
         "losses": 19.0,
@@ -8611,7 +8611,7 @@ const teamsList = [
     },
     {
         "school_name": "Rhode Island",
-        "school_id": "rhode-island",
+        "school_id": "rhode%20island",
         "g": 32.0,
         "wins": 12.0,
         "losses": 20.0,
@@ -8751,7 +8751,7 @@ const teamsList = [
     },
     {
         "school_name": "Robert Morris",
-        "school_id": "robert-morris",
+        "school_id": "robert%20morris",
         "g": 32.0,
         "wins": 10.0,
         "losses": 22.0,
@@ -8821,7 +8821,7 @@ const teamsList = [
     },
     {
         "school_name": "Sacramento State",
-        "school_id": "sacramento-state",
+        "school_id": "sacramento%20state",
         "g": 34.0,
         "wins": 10.0,
         "losses": 24.0,
@@ -8856,7 +8856,7 @@ const teamsList = [
     },
     {
         "school_name": "Sacred Heart",
-        "school_id": "sacred-heart",
+        "school_id": "sacred%20heart",
         "g": 32.0,
         "wins": 16.0,
         "losses": 16.0,
@@ -8890,8 +8890,8 @@ const teamsList = [
         "pf": 540.0
     },
     {
-        "school_name": "Saint Francis Pa",
-        "school_id": "saint-francis-pa",
+        "school_name": "Saint Francis (PA)",
+        "school_id": "saint%20francis%20%28pa%29",
         "g": 30.0,
         "wins": 8.0,
         "losses": 22.0,
@@ -8925,8 +8925,8 @@ const teamsList = [
         "pf": 532.0
     },
     {
-        "school_name": "Saint Joseph'S",
-        "school_id": "saint-joseph's",
+        "school_name": "Saint Joseph's",
+        "school_id": "saint%20joseph%27s",
         "g": 35.0,
         "wins": 21.0,
         "losses": 14.0,
@@ -8961,7 +8961,7 @@ const teamsList = [
     },
     {
         "school_name": "Saint Louis",
-        "school_id": "saint-louis",
+        "school_id": "saint%20louis",
         "g": 33.0,
         "wins": 13.0,
         "losses": 20.0,
@@ -8995,8 +8995,8 @@ const teamsList = [
         "pf": 596.0
     },
     {
-        "school_name": "Saint Mary'S Ca",
-        "school_id": "saint-mary's-ca",
+        "school_name": "Saint Mary's (CA)",
+        "school_id": "saint%20mary%27s%20%28ca%29",
         "g": 34.0,
         "wins": 26.0,
         "losses": 8.0,
@@ -9030,8 +9030,8 @@ const teamsList = [
         "pf": 556.0
     },
     {
-        "school_name": "Saint Peter'S",
-        "school_id": "saint-peter's",
+        "school_name": "Saint Peter's",
+        "school_id": "saint%20peter%27s",
         "g": 33.0,
         "wins": 19.0,
         "losses": 14.0,
@@ -9066,7 +9066,7 @@ const teamsList = [
     },
     {
         "school_name": "Sam Houston",
-        "school_id": "sam-houston",
+        "school_id": "sam%20houston",
         "g": 33.0,
         "wins": 21.0,
         "losses": 12.0,
@@ -9136,7 +9136,7 @@ const teamsList = [
     },
     {
         "school_name": "San Diego",
-        "school_id": "san-diego",
+        "school_id": "san%20diego",
         "g": 33.0,
         "wins": 18.0,
         "losses": 15.0,
@@ -9171,7 +9171,7 @@ const teamsList = [
     },
     {
         "school_name": "San Diego State",
-        "school_id": "san-diego-state",
+        "school_id": "san%20diego%20state",
         "g": 37.0,
         "wins": 26.0,
         "losses": 11.0,
@@ -9206,7 +9206,7 @@ const teamsList = [
     },
     {
         "school_name": "San Francisco",
-        "school_id": "san-francisco",
+        "school_id": "san%20francisco",
         "g": 34.0,
         "wins": 23.0,
         "losses": 11.0,
@@ -9241,7 +9241,7 @@ const teamsList = [
     },
     {
         "school_name": "San Jose State",
-        "school_id": "san-jose-state",
+        "school_id": "san%20jose%20state",
         "g": 32.0,
         "wins": 9.0,
         "losses": 23.0,
@@ -9276,7 +9276,7 @@ const teamsList = [
     },
     {
         "school_name": "Santa Clara",
-        "school_id": "santa-clara",
+        "school_id": "santa%20clara",
         "g": 33.0,
         "wins": 20.0,
         "losses": 13.0,
@@ -9346,7 +9346,7 @@ const teamsList = [
     },
     {
         "school_name": "Seton Hall",
-        "school_id": "seton-hall",
+        "school_id": "seton%20hall",
         "g": 37.0,
         "wins": 25.0,
         "losses": 12.0,
@@ -9416,7 +9416,7 @@ const teamsList = [
     },
     {
         "school_name": "South Alabama",
-        "school_id": "south-alabama",
+        "school_id": "south%20alabama",
         "g": 32.0,
         "wins": 16.0,
         "losses": 16.0,
@@ -9451,7 +9451,7 @@ const teamsList = [
     },
     {
         "school_name": "South Carolina",
-        "school_id": "south-carolina",
+        "school_id": "south%20carolina",
         "g": 34.0,
         "wins": 26.0,
         "losses": 8.0,
@@ -9486,7 +9486,7 @@ const teamsList = [
     },
     {
         "school_name": "South Carolina State",
-        "school_id": "south-carolina-state",
+        "school_id": "south%20carolina%20state",
         "g": 32.0,
         "wins": 14.0,
         "losses": 18.0,
@@ -9521,7 +9521,7 @@ const teamsList = [
     },
     {
         "school_name": "South Carolina Upstate",
-        "school_id": "south-carolina-upstate",
+        "school_id": "south%20carolina%20upstate",
         "g": 30.0,
         "wins": 10.0,
         "losses": 20.0,
@@ -9556,7 +9556,7 @@ const teamsList = [
     },
     {
         "school_name": "South Dakota",
-        "school_id": "south-dakota",
+        "school_id": "south%20dakota",
         "g": 32.0,
         "wins": 12.0,
         "losses": 20.0,
@@ -9591,7 +9591,7 @@ const teamsList = [
     },
     {
         "school_name": "South Dakota State",
-        "school_id": "south-dakota-state",
+        "school_id": "south%20dakota%20state",
         "g": 35.0,
         "wins": 22.0,
         "losses": 13.0,
@@ -9626,7 +9626,7 @@ const teamsList = [
     },
     {
         "school_name": "South Florida",
-        "school_id": "south-florida",
+        "school_id": "south%20florida",
         "g": 33.0,
         "wins": 25.0,
         "losses": 8.0,
@@ -9661,7 +9661,7 @@ const teamsList = [
     },
     {
         "school_name": "Southeast Missouri State",
-        "school_id": "southeast-missouri-state",
+        "school_id": "southeast%20missouri%20state",
         "g": 31.0,
         "wins": 9.0,
         "losses": 22.0,
@@ -9696,7 +9696,7 @@ const teamsList = [
     },
     {
         "school_name": "Southeastern Louisiana",
-        "school_id": "southeastern-louisiana",
+        "school_id": "southeastern%20louisiana",
         "g": 32.0,
         "wins": 15.0,
         "losses": 17.0,
@@ -9766,7 +9766,7 @@ const teamsList = [
     },
     {
         "school_name": "Southern California",
-        "school_id": "southern-california",
+        "school_id": "southern%20california",
         "g": 33.0,
         "wins": 15.0,
         "losses": 18.0,
@@ -9801,7 +9801,7 @@ const teamsList = [
     },
     {
         "school_name": "Southern Illinois",
-        "school_id": "southern-illinois",
+        "school_id": "southern%20illinois",
         "g": 32.0,
         "wins": 19.0,
         "losses": 13.0,
@@ -9835,8 +9835,8 @@ const teamsList = [
         "pf": 579.0
     },
     {
-        "school_name": "Siu Edwardsville",
-        "school_id": "siu-edwardsville",
+        "school_name": "SIU Edwardsville",
+        "school_id": "siu%20edwardsville",
         "g": 33.0,
         "wins": 17.0,
         "losses": 16.0,
@@ -9871,7 +9871,7 @@ const teamsList = [
     },
     {
         "school_name": "Southern Indiana",
-        "school_id": "southern-indiana",
+        "school_id": "southern%20indiana",
         "g": 32.0,
         "wins": 8.0,
         "losses": 24.0,
@@ -9906,7 +9906,7 @@ const teamsList = [
     },
     {
         "school_name": "Southern Methodist",
-        "school_id": "southern-methodist",
+        "school_id": "southern%20methodist",
         "g": 33.0,
         "wins": 20.0,
         "losses": 13.0,
@@ -9941,7 +9941,7 @@ const teamsList = [
     },
     {
         "school_name": "Southern Mississippi",
-        "school_id": "southern-mississippi",
+        "school_id": "southern%20mississippi",
         "g": 32.0,
         "wins": 16.0,
         "losses": 16.0,
@@ -9976,7 +9976,7 @@ const teamsList = [
     },
     {
         "school_name": "Southern Utah",
-        "school_id": "southern-utah",
+        "school_id": "southern%20utah",
         "g": 31.0,
         "wins": 10.0,
         "losses": 21.0,
@@ -10011,7 +10011,7 @@ const teamsList = [
     },
     {
         "school_name": "St. Bonaventure",
-        "school_id": "st.-bonaventure",
+        "school_id": "st.%20bonaventure",
         "g": 33.0,
         "wins": 20.0,
         "losses": 13.0,
@@ -10045,8 +10045,8 @@ const teamsList = [
         "pf": 553.0
     },
     {
-        "school_name": "St. John'S Ny",
-        "school_id": "st.-john's-ny",
+        "school_name": "St. John's (NY)",
+        "school_id": "st.%20john%27s%20%28ny%29",
         "g": 33.0,
         "wins": 20.0,
         "losses": 13.0,
@@ -10081,7 +10081,7 @@ const teamsList = [
     },
     {
         "school_name": "St. Thomas",
-        "school_id": "st.-thomas",
+        "school_id": "st.%20thomas",
         "g": 33.0,
         "wins": 20.0,
         "losses": 13.0,
@@ -10151,7 +10151,7 @@ const teamsList = [
     },
     {
         "school_name": "Stephen F. Austin",
-        "school_id": "stephen-f.-austin",
+        "school_id": "stephen%20f.%20austin",
         "g": 33.0,
         "wins": 18.0,
         "losses": 15.0,
@@ -10256,7 +10256,7 @@ const teamsList = [
     },
     {
         "school_name": "Stony Brook",
-        "school_id": "stony-brook",
+        "school_id": "stony%20brook",
         "g": 35.0,
         "wins": 20.0,
         "losses": 15.0,
@@ -10326,7 +10326,7 @@ const teamsList = [
     },
     {
         "school_name": "Tarleton State",
-        "school_id": "tarleton-state",
+        "school_id": "tarleton%20state",
         "g": 35.0,
         "wins": 25.0,
         "losses": 10.0,
@@ -10360,7 +10360,7 @@ const teamsList = [
         "pf": 605.0
     },
     {
-        "school_name": "Tcu",
+        "school_name": "TCU",
         "school_id": "tcu",
         "g": 34.0,
         "wins": 21.0,
@@ -10466,7 +10466,7 @@ const teamsList = [
     },
     {
         "school_name": "Tennessee State",
-        "school_id": "tennessee-state",
+        "school_id": "tennessee%20state",
         "g": 33.0,
         "wins": 18.0,
         "losses": 15.0,
@@ -10501,7 +10501,7 @@ const teamsList = [
     },
     {
         "school_name": "Tennessee Tech",
-        "school_id": "tennessee-tech",
+        "school_id": "tennessee%20tech",
         "g": 31.0,
         "wins": 10.0,
         "losses": 21.0,
@@ -10606,7 +10606,7 @@ const teamsList = [
     },
     {
         "school_name": "Texas A&M",
-        "school_id": "texas-am",
+        "school_id": "texas%20a%26m",
         "g": 36.0,
         "wins": 21.0,
         "losses": 15.0,
@@ -10641,7 +10641,7 @@ const teamsList = [
     },
     {
         "school_name": "Texas A&M-Commerce",
-        "school_id": "texas-am-commerce",
+        "school_id": "texas%20a%26m-commerce",
         "g": 33.0,
         "wins": 13.0,
         "losses": 20.0,
@@ -10676,7 +10676,7 @@ const teamsList = [
     },
     {
         "school_name": "Texas A&M-Corpus Christi",
-        "school_id": "texas-am-corpus-christi",
+        "school_id": "texas%20a%26m-corpus%20christi",
         "g": 33.0,
         "wins": 21.0,
         "losses": 12.0,
@@ -10711,7 +10711,7 @@ const teamsList = [
     },
     {
         "school_name": "Texas Southern",
-        "school_id": "texas-southern",
+        "school_id": "texas%20southern",
         "g": 33.0,
         "wins": 16.0,
         "losses": 17.0,
@@ -10746,7 +10746,7 @@ const teamsList = [
     },
     {
         "school_name": "Texas State",
-        "school_id": "texas-state",
+        "school_id": "texas%20state",
         "g": 35.0,
         "wins": 17.0,
         "losses": 18.0,
@@ -10781,7 +10781,7 @@ const teamsList = [
     },
     {
         "school_name": "Texas Tech",
-        "school_id": "texas-tech",
+        "school_id": "texas%20tech",
         "g": 34.0,
         "wins": 23.0,
         "losses": 11.0,
@@ -10816,7 +10816,7 @@ const teamsList = [
     },
     {
         "school_name": "Texas-Rio Grande Valley",
-        "school_id": "texas-rio-grande-valley",
+        "school_id": "texas-rio%20grande%20valley",
         "g": 31.0,
         "wins": 6.0,
         "losses": 25.0,
@@ -10851,7 +10851,7 @@ const teamsList = [
     },
     {
         "school_name": "The Citadel",
-        "school_id": "the-citadel",
+        "school_id": "the%20citadel",
         "g": 32.0,
         "wins": 11.0,
         "losses": 21.0,
@@ -11060,7 +11060,7 @@ const teamsList = [
         "pf": 543.0
     },
     {
-        "school_name": "Uab",
+        "school_name": "UAB",
         "school_id": "uab",
         "g": 35.0,
         "wins": 23.0,
@@ -11095,8 +11095,8 @@ const teamsList = [
         "pf": 555.0
     },
     {
-        "school_name": "Uc Davis",
-        "school_id": "uc-davis",
+        "school_name": "UC Davis",
+        "school_id": "uc%20davis",
         "g": 33.0,
         "wins": 20.0,
         "losses": 13.0,
@@ -11130,8 +11130,8 @@ const teamsList = [
         "pf": 633.0
     },
     {
-        "school_name": "Uc Irvine",
-        "school_id": "uc-irvine",
+        "school_name": "UC Irvine",
+        "school_id": "uc%20irvine",
         "g": 34.0,
         "wins": 24.0,
         "losses": 10.0,
@@ -11165,8 +11165,8 @@ const teamsList = [
         "pf": 624.0
     },
     {
-        "school_name": "Uc Riverside",
-        "school_id": "uc-riverside",
+        "school_name": "UC Riverside",
+        "school_id": "uc%20riverside",
         "g": 34.0,
         "wins": 16.0,
         "losses": 18.0,
@@ -11200,8 +11200,8 @@ const teamsList = [
         "pf": 586.0
     },
     {
-        "school_name": "Uc San Diego",
-        "school_id": "uc-san-diego",
+        "school_name": "UC San Diego",
+        "school_id": "uc%20san%20diego",
         "g": 33.0,
         "wins": 21.0,
         "losses": 12.0,
@@ -11235,8 +11235,8 @@ const teamsList = [
         "pf": 532.0
     },
     {
-        "school_name": "Uc Santa Barbara",
-        "school_id": "uc-santa-barbara",
+        "school_name": "UC Santa Barbara",
+        "school_id": "uc%20santa%20barbara",
         "g": 31.0,
         "wins": 16.0,
         "losses": 15.0,
@@ -11270,7 +11270,7 @@ const teamsList = [
         "pf": 511.0
     },
     {
-        "school_name": "Ucf",
+        "school_name": "UCF",
         "school_id": "ucf",
         "g": 33.0,
         "wins": 17.0,
@@ -11305,7 +11305,7 @@ const teamsList = [
         "pf": 601.0
     },
     {
-        "school_name": "Ucla",
+        "school_name": "UCLA",
         "school_id": "ucla",
         "g": 33.0,
         "wins": 16.0,
@@ -11340,8 +11340,8 @@ const teamsList = [
         "pf": 609.0
     },
     {
-        "school_name": "Unc Asheville",
-        "school_id": "unc-asheville",
+        "school_name": "UNC Asheville",
+        "school_id": "unc%20asheville",
         "g": 34.0,
         "wins": 22.0,
         "losses": 12.0,
@@ -11375,8 +11375,8 @@ const teamsList = [
         "pf": 581.0
     },
     {
-        "school_name": "Unc Greensboro",
-        "school_id": "unc-greensboro",
+        "school_name": "UNC Greensboro",
+        "school_id": "unc%20greensboro",
         "g": 32.0,
         "wins": 21.0,
         "losses": 11.0,
@@ -11410,8 +11410,8 @@ const teamsList = [
         "pf": 549.0
     },
     {
-        "school_name": "Unc Wilmington",
-        "school_id": "unc-wilmington",
+        "school_name": "UNC Wilmington",
+        "school_id": "unc%20wilmington",
         "g": 31.0,
         "wins": 21.0,
         "losses": 10.0,
@@ -11445,8 +11445,8 @@ const teamsList = [
         "pf": 527.0
     },
     {
-        "school_name": "Ut Arlington",
-        "school_id": "ut-arlington",
+        "school_name": "UT Arlington",
+        "school_id": "ut%20arlington",
         "g": 34.0,
         "wins": 20.0,
         "losses": 14.0,
@@ -11516,7 +11516,7 @@ const teamsList = [
     },
     {
         "school_name": "Utah State",
-        "school_id": "utah-state",
+        "school_id": "utah%20state",
         "g": 35.0,
         "wins": 28.0,
         "losses": 7.0,
@@ -11551,7 +11551,7 @@ const teamsList = [
     },
     {
         "school_name": "Utah Tech",
-        "school_id": "utah-tech",
+        "school_id": "utah%20tech",
         "g": 31.0,
         "wins": 11.0,
         "losses": 20.0,
@@ -11586,7 +11586,7 @@ const teamsList = [
     },
     {
         "school_name": "Utah Valley",
-        "school_id": "utah-valley",
+        "school_id": "utah%20valley",
         "g": 32.0,
         "wins": 16.0,
         "losses": 16.0,
@@ -11620,7 +11620,7 @@ const teamsList = [
         "pf": 578.0
     },
     {
-        "school_name": "Utep",
+        "school_name": "UTEP",
         "school_id": "utep",
         "g": 34.0,
         "wins": 18.0,
@@ -11655,7 +11655,7 @@ const teamsList = [
         "pf": 677.0
     },
     {
-        "school_name": "Utsa",
+        "school_name": "UTSA",
         "school_id": "utsa",
         "g": 32.0,
         "wins": 11.0,
@@ -11866,7 +11866,7 @@ const teamsList = [
     },
     {
         "school_name": "Virginia Commonwealth",
-        "school_id": "virginia-commonwealth",
+        "school_id": "virginia%20commonwealth",
         "g": 38.0,
         "wins": 24.0,
         "losses": 14.0,
@@ -11900,7 +11900,7 @@ const teamsList = [
         "pf": 625.0
     },
     {
-        "school_name": "Vmi",
+        "school_name": "VMI",
         "school_id": "vmi",
         "g": 32.0,
         "wins": 4.0,
@@ -11936,7 +11936,7 @@ const teamsList = [
     },
     {
         "school_name": "Virginia Tech",
-        "school_id": "virginia-tech",
+        "school_id": "virginia%20tech",
         "g": 34.0,
         "wins": 19.0,
         "losses": 15.0,
@@ -12006,7 +12006,7 @@ const teamsList = [
     },
     {
         "school_name": "Wake Forest",
-        "school_id": "wake-forest",
+        "school_id": "wake%20forest",
         "g": 35.0,
         "wins": 21.0,
         "losses": 14.0,
@@ -12076,7 +12076,7 @@ const teamsList = [
     },
     {
         "school_name": "Washington State",
-        "school_id": "washington-state",
+        "school_id": "washington%20state",
         "g": 35.0,
         "wins": 25.0,
         "losses": 10.0,
@@ -12111,7 +12111,7 @@ const teamsList = [
     },
     {
         "school_name": "Weber State",
-        "school_id": "weber-state",
+        "school_id": "weber%20state",
         "g": 32.0,
         "wins": 20.0,
         "losses": 12.0,
@@ -12146,7 +12146,7 @@ const teamsList = [
     },
     {
         "school_name": "West Virginia",
-        "school_id": "west-virginia",
+        "school_id": "west%20virginia",
         "g": 32.0,
         "wins": 9.0,
         "losses": 23.0,
@@ -12181,7 +12181,7 @@ const teamsList = [
     },
     {
         "school_name": "Western Carolina",
-        "school_id": "western-carolina",
+        "school_id": "western%20carolina",
         "g": 32.0,
         "wins": 22.0,
         "losses": 10.0,
@@ -12216,7 +12216,7 @@ const teamsList = [
     },
     {
         "school_name": "Western Illinois",
-        "school_id": "western-illinois",
+        "school_id": "western%20illinois",
         "g": 33.0,
         "wins": 21.0,
         "losses": 12.0,
@@ -12251,7 +12251,7 @@ const teamsList = [
     },
     {
         "school_name": "Western Kentucky",
-        "school_id": "western-kentucky",
+        "school_id": "western%20kentucky",
         "g": 34.0,
         "wins": 22.0,
         "losses": 12.0,
@@ -12286,7 +12286,7 @@ const teamsList = [
     },
     {
         "school_name": "Western Michigan",
-        "school_id": "western-michigan",
+        "school_id": "western%20michigan",
         "g": 32.0,
         "wins": 12.0,
         "losses": 20.0,
@@ -12321,7 +12321,7 @@ const teamsList = [
     },
     {
         "school_name": "Wichita State",
-        "school_id": "wichita-state",
+        "school_id": "wichita%20state",
         "g": 34.0,
         "wins": 15.0,
         "losses": 19.0,
@@ -12356,7 +12356,7 @@ const teamsList = [
     },
     {
         "school_name": "William & Mary",
-        "school_id": "william--mary",
+        "school_id": "william%20%26%20mary",
         "g": 33.0,
         "wins": 10.0,
         "losses": 23.0,
@@ -12496,7 +12496,7 @@ const teamsList = [
     },
     {
         "school_name": "Wright State",
-        "school_id": "wright-state",
+        "school_id": "wright%20state",
         "g": 32.0,
         "wins": 18.0,
         "losses": 14.0,
@@ -12636,7 +12636,7 @@ const teamsList = [
     },
     {
         "school_name": "Youngstown State",
-        "school_id": "youngstown-state",
+        "school_id": "youngstown%20state",
         "g": 32.0,
         "wins": 22.0,
         "losses": 10.0,
