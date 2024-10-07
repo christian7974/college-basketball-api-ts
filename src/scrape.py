@@ -5,7 +5,7 @@ import re
 import urllib.parse
 url = "https://www.sports-reference.com/cbb/seasons/men/2024-school-stats.html#basic_school_stats"
 response = requests.get(url)
-
+# TODO: Add functionality to scrape the table for women's basketball
 # array of all the teams
 array_of_teams = []
 
@@ -23,17 +23,15 @@ if response.status_code == 200:
                 if (td['data-stat'] != "DUMMY"):
                     if (td['data-stat'] == "school_name"):
                         
-                        team_name = td.text.replace('\u00a0NCAA', '') # remove the NCAA from the team name
-                        # team_name = re.sub(r'\(([^)]*)\)', r'\1', team_name).strip() # Removes the Parantheses from the team name
+                        team_name = td.text.replace('\u00a0NCAA', '') # Remove the NCAA from the team name
                         individual_team[td['data-stat']] = team_name
 
-                        # school_id = team_name.lower().replace(" ", "%20")
-                        # school_id = school_id.replace("&", "%26")
+                        # Encode the Team Name to be used as the school ID
                         school_id = urllib.parse.quote(team_name.lower())
                         individual_team["school_id"] = school_id
                         
                     else:
-                        # make it so that the program continues if the cell is blank
+                        # Program continues if the cell is blank
                         if td.text == "":
                             individual_team[td['data-stat']] = 0
                         else:
@@ -42,13 +40,7 @@ if response.status_code == 200:
 
 else:
     print("Error: " + str(response.status_code))
-# print(array_of_teams[0])
-# write the array to a json file
-# pretty print the array of json objects
+# Write the array to a JSON file
+# Pretty Print the array of JSON objects
 with(open("teams.json", "w")) as file:
     file.write(json.dumps(array_of_teams, indent=4))
-
-# print(array_of_teams[3])
-# list_of_properties = list(array_of_teams[3].keys())
-# print(list_of_properties)
-# write the array to a json file
