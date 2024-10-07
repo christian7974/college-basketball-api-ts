@@ -1,8 +1,8 @@
 import express from 'express';
 
-const router = express.Router();
-
 import {addAllTeams, showAllTeams, findTeamByName, sortTeams, getExtreme, compareTwoTeams, clearDatabase} from '../controllers/teamController';
+
+const router = express.Router();
 
 // Clear all of the teams in the database
 router.delete('/', clearDatabase);
