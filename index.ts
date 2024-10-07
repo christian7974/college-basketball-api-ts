@@ -1,11 +1,13 @@
 // src/index.js
+
+
 import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
 import router from "./routes/teamRoute";
-
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 dotenv.config();
+// const mongoose = require("mongoose");
 
 const app: Express = express();
 
