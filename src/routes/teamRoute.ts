@@ -14,4 +14,6 @@ router.get('/:teamName', findTeamByName);
 
 router.get('/sort/:stat/:order', sortTeams);
 
+router.get('/extreme/:stat/:whichExtreme', getExtreme);
+
 export default router;

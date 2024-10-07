@@ -79,6 +79,7 @@ const findTeamByName = asyncHandler(async(req, res) => {
     }
 });
 // [statToSortBy] 1 is ascending, -1 is descending
+// TODO: add a third parameter for the first n teams sorted by the stat
 const sortTeams = asyncHandler(async(req, res) => {
     try {
         const statToSortBy = req.params['stat'];
@@ -106,6 +107,7 @@ const sortTeams = asyncHandler(async(req, res) => {
 // Get the team that has the most/least of a statistic
 // 1 -> is the least
 // -1 -> is the most
+// TODO: Get the first n teams with the most/least of a statistic
 const getExtreme = asyncHandler(async(req, res) => {
     try {
         const statToGetExtremeOf = req.params['stat'];
