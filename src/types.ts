@@ -1,4 +1,4 @@
-type TeamStats = {
+export type IndividualTeam = {
     schoolId: string;      // school name api-friendly (no spaces, no special characters, lowercase)
     schoolName: string;    // official school name
     gamesPlayed: number;   // games played
@@ -33,3 +33,14 @@ type TeamStats = {
     turnovers: number;     // turnovers
     personalFouls: number; // personal fouls
 };
+
+export enum Order {
+    "asc" = 1,
+    "des" = -1
+}
+
+export enum Extreme {
+    "least" = 1,
+    "most" = -1
+}
+
