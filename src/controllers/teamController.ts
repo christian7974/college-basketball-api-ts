@@ -93,7 +93,7 @@ const sortTeams = asyncHandler(async(req, res) => {
         } else if (order == "des"){
             valToSort = -1;
         } else {
-            res.status(400).json({error: order + " is not a valid parameter. Please use either asc or des."});
+            res.status(400).json({error: order + " is not a valid order. Please use either asc or des."});
             res.end();
         }
         const sortedJSON = await (Team.find({}, {_id: 0, __v: 0}).sort({[statToSortBy]: valToSort}));

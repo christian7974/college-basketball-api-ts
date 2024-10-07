@@ -12,4 +12,6 @@ router.get('/all', showAllTeams);
 
 router.get('/:teamName', findTeamByName);
 
+router.get('/sort/:stat/:order', sortTeams);
+
 export default router;
