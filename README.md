@@ -38,14 +38,14 @@ Albany (NY) -> ```albany%20%28ny%29```, where the opening parenthesis is %28 and
 ## Fetch Every Team
 To fetch every team and their statistics, use the following:
 ```
-https://college-basketball-api.onrender.com/all
+https://college-basketball-api-ts.onrender.com/all
 ```
 This will send an array of every team as a JSON object to the client. **This is automatically sorted by team name, starting with A**.
 
 ## Fetch One Team By Name:
 To only get one team by name, use the following:
 ```
-https://college-basketball-api.onrender.com/team_name
+https://college-basketball-api-ts.onrender.com/team_name
 ```
 where *team_name* is the name of the team that you want to fetch.
 
@@ -54,21 +54,21 @@ where *team_name* is the name of the team that you want to fetch.
 
 To sort the teams by a statistic, use the following:
 ```
-https://college-basketball-api.onrender.com/sort/stat_to_sort_by/order
+https://college-basketball-api-ts.onrender.com/sort/stat_to_sort_by/order
 ```
 where *stat_to_sort_by* is that stat that you want to sort the teams by and *order* is whether you want to sort the teams by **asc**ending value or **des**cending value.
 
 ## Fetch a Team with the Most/Least of a Statistic
 To find the team with the most/least of a statistic, use:
 ```
-https://college-basketball-api.onrender.com/extreme/stat/extreme
+https://college-basketball-api-ts.onrender.com/extreme/stat/extreme
 ```
 where the *stat* is the stat you want to check and *extreme* is which extreme you want (*most* being the team with the highest of that stat, least being the lowest of that stat).
 
 ## Fetch Two Teams to Compare
 If you want to fetch two teams and compare their stats, use the following:
 ```
-https://college-basketball-api.onrender.com/compare/team1/team2
+https://college-basketball-api-ts.onrender.com/compare/team1/team2
 ```
 where *team1* is the first team that you want to compare and *team2* is the second team that you want to compare. This returns an array of JSON objects with both teams in the array.
 
@@ -120,7 +120,7 @@ https://college-basketball-api.onrender.com/teams/sort/fg3a/asc
 ## 1. Fetch One Team By Name  
 If you wanted to find the stats for Gonzaga, use the following:  
 ```
-https://college-basketball-api.onrender.com/gonzaga
+https://college-basketball-api-ts.onrender.com/gonzaga
 ```  
 which would return the following JSON:
 
@@ -164,7 +164,7 @@ which would return the following JSON:
 ## 2. Sort Teams by Statistic  
 If you wanted to sort all of the teams by total blocks ascending, use the following:  
 ```
-https://college-basketball-api.onrender.com/teams/sort/blk/asc
+https://college-basketball-api-ts.onrender.com/teams/sort/blk/asc
 ```  
 which would send the client an array of every team sorted by blocks per game in ascending order:
 ```JSON
@@ -212,7 +212,7 @@ which would send the client an array of every team sorted by blocks per game in 
 ## 3. Fetch a Team with the Extreme of a Stat  
 If you wanted to find the team with the most offensive rebounds, use the following:  
 ```
-https://college-basketball-api.onrender.com/extreme/orb/most
+https://college-basketball-api-ts.onrender.com/extreme/orb/most
 ```  
 which would result in the following:  
 ```JSON
@@ -255,7 +255,7 @@ which would result in the following:
 ## 4. Fetch Two Teams to Compare  
 If you wanted to compare the statistics of Connecticut and Southern Indiana, the following would be used:
 ```
-https://college-basketball-api.onrender.com/compare/connecticut/southern_indiana
+https://college-basketball-api-ts.onrender.com/compare/connecticut/southern_indiana
 ```  
 and the outcome would be:
 ```JSON
@@ -336,7 +336,7 @@ When using this API, you may mispell a team name (Orel Roberts vs Oral Roberts) 
 
 For instance, if you tried to use this endpoint (notice the two teams that are being compared):
 ```
-https://college-basketball-api.onrender.com/compare/road_island/gonzaguh
+https://college-basketball-api-ts.onrender.com/compare/road_island/gonzaguh
 ```
 you would get the following JSON:
 ```JSON
@@ -346,7 +346,7 @@ you would get the following JSON:
 ```
 alerting you that those teams do not exist in the database. If you tried using this endpoint:
 ```
-https://college-basketball-api.onrender.com/extreme/fouls/most
+https://college-basketball-api-ts.onrender.com/extreme/fouls/most
 ```
 the following JSON would be sent to the client:
 ```JSON
