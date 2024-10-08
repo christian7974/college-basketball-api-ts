@@ -6,6 +6,7 @@ import urllib.parse
 url = "https://www.sports-reference.com/cbb/seasons/men/2024-school-stats.html#basic_school_stats"
 response = requests.get(url)
 # TODO: Add functionality to scrape the table for women's basketball
+# TODO: Add the teams to the database right from the scraper
 # array of all the teams
 array_of_teams = []
 
@@ -14,7 +15,6 @@ if response.status_code == 200:
     title = soup.title
     all_table_rows = soup.find_all("tr")
     for row in all_table_rows:
-        # if (row):
         individual_team = {}
         # find all the team names
         all_tds = row.find_all("td")

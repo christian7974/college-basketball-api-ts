@@ -1,4 +1,4 @@
-# College-Basketball-API (Now in TS)
+# College Basketball API (Now in TS)
 
 # Table of Contents
 1. [Features/Functionality](#featuresfunctionality)
@@ -14,12 +14,12 @@ I wanted to make an API that was easy to use and had ample documentation so that
 
 This is the **third** iteration of the project, where the project is now written in Typescript and the problem with querying teams with symbols in their names has been resolved.
 
-This project was made using Typescript, Node.js, Express, Mongoose/MongoDB and hosted on Render.  
+This project was made using Typescript, Node.js, Express, Mongoose/MongoDB and hosted on Render. The website scraped was [Basketball Reference](https://www.sports-reference.com/cbb/seasons/men/2024-school-stats.html#basic_school_stats), which is a website that I use a lot to settle sports arguments.
 
 # Challenges I Faced
 One challenge that I faced was how the user was going to look up teams that had special symbols in their team name (for instance, Texas A&M). 
 
-Since you cannot have special symbols in the name, I added another field to each team called the ```school_id```, where it contains the encoded version of the school name, which is what will be used whenever you want to query the team. This is easy for teams like Alabama, where the ```school_id``` is just ```alabama```, however for a team like Texas A&M, the encoded name is  ```texas%20a%26m```, where the space is ```%20``` and the ampersand (&) is ```%26```. This is because you cannot have some symbols in a URL (such as spaces and parantheses, so the school Albany (NY) encoded is ```albany%20%28ny%29```).
+Since you cannot have special symbols in the name, I added another field to each team called the ```school_id```, where it contains the encoded version of the school name, which is what will be used whenever you want to query the team. This is easy for teams like Alabama, where the ```school_id``` is just ```alabama```. However for a team like Texas A&M, the encoded name is  ```texas%20a%26m```, where the space is ```%20``` and the ampersand (&) is ```%26```. This is because you cannot have some symbols in a URL (such as spaces and parantheses, so the school Albany (NY) encoded is ```albany%20%28ny%29```).
 
 # Inspiration
 I got the inspiration for this project when I wanted something to help me create a bracket for March Madness. I could not find a tool that listed out every statistic for a team (While ESPN was a good start, they did not have the stats that I was looking for when making a decision). The tools that did were either really difficult to use or were not free.  
@@ -50,7 +50,7 @@ https://college-basketball-api-ts.onrender.com/team_name
 where *team_name* is the name of the team that you want to fetch.
 
 ## Sort Teams by a Statistic
-[Here is the table of eligible statistics you can query for](#table-of-statistics)
+[Here is the table](#table-of-statistics) of eligible statistics you can query for
 
 To sort the teams by a statistic, use the following:
 ```
@@ -74,7 +74,7 @@ where *team1* is the first team that you want to compare and *team2* is the seco
 
 ## Table of Statistics
 | Abbreviation    | Statistic                                        | API Abbreviation   |
-|----------------|--------------------------------------------------|--------------------|
+|-----------------|---------------------------------------------------|--------------------|
 | School Name     | The name of the school                           | school_name        |
 | School ID       | The URL encoded version of the school name       | school_id          |
 | Wins            | Total number of games won                        | wins               |
@@ -110,7 +110,7 @@ where *team1* is the first team that you want to compare and *team2* is the seco
 
 
 
-For instance, if you wanted to sort teams by their 3-point shots attempted per game ascending, it would look something like:
+For instance, if you wanted to sort teams by their 3-point shots attempted per game in ascending order, it would look something like:
 ```
 https://college-basketball-api.onrender.com/teams/sort/fg3a/asc
 ```
@@ -359,9 +359,13 @@ letting them know that fouls is not a statistic stored for the teams.
 
 # Features To Be Implemented
 Within the code, there are some comments labeled TODO - those are features that I plan on adding to the API, but some of the notable ones are:
-- Add the Women's NCAA D1 Statistics
+- Add Women's NCAA D1 Team statistics
 - When sorting teams, showing only the first N results
 - Allow the user to compare N teams when using the comparison endpoint
+- Query for teams with stats over a certain amount, under a certain amount or between two amounts
+- Possible Chrome Extension that shows the stats of the teams when clicking on the matchups (allowing for better analysis of games)
+- Come up with a formula that produces a number on the team most likely to win a matchup (great for quick selections)
+
 
 # Problem?
 If you notice a problem (a team has an incorrect value for a statistic, some functionality does not work, etc.) then please create an issue with a description of the issue and how you reproduced that mishap. A helpful issue would include:
