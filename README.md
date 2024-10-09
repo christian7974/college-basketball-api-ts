@@ -45,7 +45,7 @@ This will send an array of every team as a JSON object to the client. **This is 
 ## Fetch One Team By Name:
 To only get one team by name, use the following:
 ```
-https://college-basketball-api-ts.onrender.com/team_name
+https://college-basketball-api-ts.onrender.com/one/team_name
 ```
 where *team_name* is the name of the team that you want to fetch.
 
@@ -68,9 +68,9 @@ where the *stat* is the stat you want to check, *extreme* is which extreme you w
 ## Fetch Two Teams to Compare
 If you want to fetch two teams and compare their stats, use the following:
 ```
-https://college-basketball-api-ts.onrender.com/compare/team1/team2
+https://college-basketball-api-ts.onrender.com/multiple?teams=team1&teams=team2
 ```
-where *team1* is the first team that you want to compare and *team2* is the second team that you want to compare. This returns an array of JSON objects with both teams in the array.
+where *team1* is the first team that you want to compare and *team2* is the second team that you want to compare. This returns an array of JSON objects with both teams in the array. You can add as many teams as needed to this call by adding ```&teams=team_id```.
 
 ## Table of Statistics
 | Abbreviation    | Statistic                                        | API Abbreviation   |
@@ -120,7 +120,7 @@ https://college-basketball-api.onrender.com/teams/sort/fg3a/asc
 ## 1. Fetch One Team By Name  
 If you wanted to find the stats for Gonzaga, use the following:  
 ```
-https://college-basketball-api-ts.onrender.com/gonzaga
+https://college-basketball-api-ts.onrender.com/one/gonzaga
 ```  
 which would return the following JSON:
 
@@ -256,7 +256,7 @@ which would result in the following:
 ## 4. Fetch Two Teams to Compare  
 If you wanted to compare the statistics of Connecticut and Southern Indiana, the following would be used:
 ```
-https://college-basketball-api-ts.onrender.com/compare/connecticut/southern_indiana
+https://college-basketball-api-ts.onrender.com/multiple?teams=connecticut&teams=southern_indiana
 ```  
 and the outcome would be:
 ```JSON
@@ -337,7 +337,7 @@ When using this API, you may mispell a team name (Orel Roberts vs Oral Roberts) 
 
 For instance, if you tried to use this endpoint (notice the two teams that are being compared):
 ```
-https://college-basketball-api-ts.onrender.com/compare/road_island/gonzaguh
+https://college-basketball-api-ts.onrender.com/multiple?teams=road_island&teams=gonzaguh
 ```
 you would get the following JSON:
 ```JSON

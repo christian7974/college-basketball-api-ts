@@ -1,6 +1,6 @@
 import express from 'express';
 
-import {addAllTeams, showAllTeams, findTeamByName, sortTeams, getExtreme, compareTwoTeams, clearDatabase} from '../controllers/teamController';
+import {addAllTeams, showAllTeams, findTeamByName, sortTeams, getExtreme, compareMultipleTeams, clearDatabase} from '../controllers/teamController';
 
 const router = express.Router();
 
@@ -14,7 +14,7 @@ router.post('/add-all', addAllTeams);
 router.get('/all', showAllTeams);
 
 // Find a team by its name
-router.get('/:teamName', findTeamByName);
+router.get('/one/:teamName', findTeamByName);
 
 // Sort the teams by a certain statistic
 router.get('/sort/:stat/:order', sortTeams);
@@ -22,8 +22,8 @@ router.get('/sort/:stat/:order', sortTeams);
 // Get the team with the most or the least of a statistic (the question mark after the parameter means that it is optional)
 router.get('/extreme/:stat/:whichExtreme/:numExtreme?', getExtreme);
 
-// Compare two teams by their statistics
-router.get('/compare/:team1/:team2', compareTwoTeams);
+// Compare two teams by their statistics (Uses query parameters instead of URL parameters)
+router.get('/multiple', compareMultipleTeams);
 
 
 export default router;

@@ -3,6 +3,7 @@ import Team from '../models/teamModel';
 import TeamsList from '../teams_list';
 import { IndividualTeam, Order, Extreme } from '../types';
 import teamsList from "../teams_list";
+import { encode } from "punycode";
 const arrayOfStats = ['school_name', 'school_id', 'g', 'wins', 'losses', 'win_loss_pct', 'srs', 'sos', 'wins_conf', 'losses_conf', 'wins_home', 'losses_home', 'wins_visitor', 'losses_visitor', 'pts', 'opp_pts', 'mp', 'fg', 'fga', 'fg_pct', 'fg3', 'fg3a', 'fg3_pct', 'ft', 'fta', 'ft_pct', 'orb', 'trb', 'ast', 'stl', 'blk', 'tov', 'pf'];
 
 const statExists = function(inputtedStat: string): boolean {
@@ -90,7 +91,7 @@ const findTeamByName = asyncHandler(async(req, res) => {
      * @return JSON object of the team that is found or an error message indicating that the team is not found
      */
     try {
-        var {teamName} = req.params;
+        var teamName = req.params['teamName'];
         // Encode the name again, in case for some reason it is not encoded
         teamName = encodeTeamName(teamName);
         var theTeam = await Team.find({"school_id": teamName}, {_id: 0, __v: 0});
@@ -174,7 +175,7 @@ const getExtreme = asyncHandler(async(req, res) => {
 });
 
 // TODO: Make this endpoint variable to compare n teams
-const compareTwoTeams = asyncHandler(async(req, res) => {
+const compareMultipleTeams = asyncHandler(async(req, res) => {
     /**
      * Function that retrieves two teams that the user wants to compare
      * 
@@ -185,25 +186,18 @@ const compareTwoTeams = asyncHandler(async(req, res) => {
      * @returns Array of JSON objects of both teams
      */
     try {
-        var teamOneName: string = req.params['team1'];
-        var teamTwoName: string = req.params['team2'];
-        teamOneName = encodeTeamName(teamOneName);
-        teamTwoName = encodeTeamName(teamTwoName);
-        const bothTeams = await Team.find({
-            "school_id": {
-                $in : [
-                    teamOneName, 
-                    teamTwoName
-                ]
-            }
-        }, {_id: 0, __v: 0});
-        if (bothTeams.length < 2 || bothTeams.length === 0) {
-            res.status(400).json({error: "One or both of the teams are not in the database of teams. Please try another team."});
+        const teams = req.query.teams;
+        if (!teams) {
+            res.status(400).json({error: "Please input at least two teams to compare."});
         }
-        res.status(200).json(bothTeams);
+        const teamsArray = Array.isArray(teams) ? teams : [teams];
+        const decodedTeamsArray = teamsArray.map(team => encodeTeamName(team as string));
+        const foundTeams = await Team.find({"school_id": {$in: decodedTeamsArray}}, {_id: 0, __v: 0});
+        
+        teamsArray.length < 2 ? res.status(200).json(foundTeams[0]) : res.status(200).json(foundTeams);
     } catch (error) {
         res.status(500);
     }
 });
 
-export {addAllTeams, showAllTeams, findTeamByName, sortTeams, getExtreme, compareTwoTeams, clearDatabase};
+export {addAllTeams, showAllTeams, findTeamByName, sortTeams, getExtreme, compareMultipleTeams, clearDatabase};
