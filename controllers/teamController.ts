@@ -119,11 +119,13 @@ const findTeamByName = asyncHandler(async(req, res) => {
      */
     try {
         var {teamName} = req.params;
-
+        // Encode the name again, in case for some reason it is not encoded
         teamName = encodeURI(teamName);
         teamName = teamName.replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/&/g, '%26');
         var theTeam = await Team.find({"school_id": teamName}, {_id: 0, __v: 0});
-
+        if (theTeam.length === 0) {
+            res.status(400).json({error: "The team with the school_id " + teamName + " is not in the database. Please try another team."});
+        }
         res.status(200).json(theTeam[0]); // The [0] is so the client has a single JSON instead of an array with only one JSON in it
     } catch (error) {
         res.status(500);
