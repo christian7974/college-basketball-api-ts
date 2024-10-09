@@ -19,8 +19,8 @@ router.get('/:teamName', findTeamByName);
 // Sort the teams by a certain statistic
 router.get('/sort/:stat/:order', sortTeams);
 
-// Get the team with the most or the least of a statistic
-router.get('/extreme/:stat/:whichExtreme', getExtreme);
+// Get the team with the most or the least of a statistic (the question mark after the parameter means that it is optional)
+router.get('/extreme/:stat/:whichExtreme/:numExtreme?', getExtreme);
 
 // Compare two teams by their statistics
 router.get('/compare/:team1/:team2', compareTwoTeams);

@@ -2,7 +2,8 @@ import asyncHandler from "express-async-handler"
 import Team from '../models/teamModel';
 import TeamsList from '../teams_list';
 import { IndividualTeam, Order, Extreme } from '../types';
-const arrayOfStats = ['school_name', 'g', 'wins', 'losses', 'win_loss_pct', 'srs', 'sos', 'wins_conf', 'losses_conf', 'wins_home', 'losses_home', 'wins_visitor', 'losses_visitor', 'pts', 'opp_pts', 'mp', 'fg', 'fga', 'fg_pct', 'fg3', 'fg3a', 'fg3_pct', 'ft', 'fta', 'ft_pct', 'orb', 'trb', 'ast', 'stl', 'blk', 'tov', 'pf'];
+import teamsList from "../teams_list";
+const arrayOfStats = ['school_name', 'school_id', 'g', 'wins', 'losses', 'win_loss_pct', 'srs', 'sos', 'wins_conf', 'losses_conf', 'wins_home', 'losses_home', 'wins_visitor', 'losses_visitor', 'pts', 'opp_pts', 'mp', 'fg', 'fga', 'fg_pct', 'fg3', 'fg3a', 'fg3_pct', 'ft', 'fta', 'ft_pct', 'orb', 'trb', 'ast', 'stl', 'blk', 'tov', 'pf'];
 
 const statExists = function(inputtedStat: string): boolean {
     /**
@@ -135,15 +136,14 @@ const sortTeams = asyncHandler(async(req, res) => {
     }
 });
 
-// TODO: Get the first n teams with the most/least of a statistic
 const getExtreme = asyncHandler(async(req, res) => {
     /**
      * Function to get the team with the most or least of a statistic (1 is the least and -1 is the most)
      * 
      * @remarks
-     * This function is used for the Extreme route that retrieves the team with the most or least of a statistic.
+     * This function is used for the Extreme route that retrieves the team with the most or least of a statistic. Can also be used to find the top n teams of that statistic.
      * 
-     * @param req - The statistic that the user wants to find the extreme of and which extreme they want to find
+     * @param req - The stat the user wants to find the extreme of, the most or least of that stat and how many of the top (or bottom) teams to show
      * @returns JSON object of the team with the most or least of a statistic
      */
     try {
@@ -152,8 +152,11 @@ const getExtreme = asyncHandler(async(req, res) => {
             res.status(400).json({error: statToGetExtremeOf + " is not a valid statistic. Please refer to documentation to find a proper statistic."});
         };
         const whichExtreme = req.params['whichExtreme'].toString();
-        var extremeSide: Extreme;
+        const numExtreme: number = +req.params['numExtreme'] || 1;
+        console.log(numExtreme);
+        numExtreme > teamsList.length && res.status(400).json({error: "The number of teams you want to find is greater than the number of teams in the database."});
 
+        var extremeSide: Extreme;
         if (whichExtreme == "least") {
             extremeSide = Extreme.least;
         } else if (whichExtreme == "most"){
@@ -163,8 +166,8 @@ const getExtreme = asyncHandler(async(req, res) => {
             return;
         }
 
-        const theTeam = await (Team.find({}, {_id: 0, __v: 0}).sort({[statToGetExtremeOf] : extremeSide}).limit(1));
-        res.status(200).json(theTeam[0]); // The [0] is so this sends a single JSON instead of an array containing one JSON
+        const theTeam = await (Team.find({}, {_id: 0, __v: 0}).sort({[statToGetExtremeOf] : extremeSide}).limit(numExtreme));
+        numExtreme === 1 ? res.status(200).json(theTeam[0]) : res.status(200).json(theTeam); // The [0] is so this sends a single JSON instead of an array containing one JSON
     } catch (error) {
         res.status(500);
     }

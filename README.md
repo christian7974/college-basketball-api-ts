@@ -61,9 +61,9 @@ where *stat_to_sort_by* is that stat that you want to sort the teams by and *ord
 ## Fetch a Team with the Most/Least of a Statistic
 To find the team with the most/least of a statistic, use:
 ```
-https://college-basketball-api-ts.onrender.com/extreme/stat/extreme
+https://college-basketball-api-ts.onrender.com/extreme/stat/extreme/numExtreme
 ```
-where the *stat* is the stat you want to check and *extreme* is which extreme you want (*most* being the team with the highest of that stat, least being the lowest of that stat).
+where the *stat* is the stat you want to check, *extreme* is which extreme you want (*most* being the team with the highest of that stat, least being the lowest of that stat) and *numExtreme* is how many teams you want shown in order of the extreme. If this number is omitted, then it will default to one and only show one team.
 
 ## Fetch Two Teams to Compare
 If you want to fetch two teams and compare their stats, use the following:
@@ -251,6 +251,7 @@ which would result in the following:
 	"pf": 611
 }
 ```
+**Please note**: If numExtreme is anything other than 1, then an array of JSON objects will be returned. If 0 is entered, then only one team will be shown.
 
 ## 4. Fetch Two Teams to Compare  
 If you wanted to compare the statistics of Connecticut and Southern Indiana, the following would be used:
@@ -365,7 +366,7 @@ Within the code, there are some comments labeled TODO - those are features that 
 - Query for teams with stats over a certain amount, under a certain amount or between two amounts
 - Possible Chrome Extension that shows the stats of the teams when clicking on the matchups (allowing for better analysis of games)
 - Come up with a formula that produces a number on the team most likely to win a matchup (great for quick selections)
-
+- Add per-game statistics to each team.
 
 # Problem?
 If you notice a problem (a team has an incorrect value for a statistic, some functionality does not work, etc.) then please create an issue with a description of the issue and how you reproduced that mishap. A helpful issue would include:
