@@ -21,23 +21,11 @@ const statExists = function(inputtedStat: string): boolean {
     }
 };
 
-const teamExists = function(inputtedTeam: string): boolean {
-    /**
-     * This function checks if the inputted team exists in the array of teams. Since the amount of teams is a small constant, we can use a linear search to find the team
-     * 
-     * @remarks
-     * This is a helper function for the compareTwoTeams function that ensures a team exists before comparing it
-     * 
-     * @param inputtedTeam - The team that the user wants to compare
-     * @returns Boolean value indicating if the team exists
-     */
-    for (var i = 0; i < TeamsList.length; i ++) {
-        if (inputtedTeam === TeamsList[i].school_name) {
-            return true;
-        }
-    }
-    return false;
-};
+const encodeTeamName = function(teamName: string): string { 
+    teamName = encodeURI(teamName);
+    teamName = teamName.replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/&/g, '%26');
+    return teamName;
+}
 
 const addAllTeams = asyncHandler(async(_, res) => {
     /**
@@ -90,23 +78,6 @@ const showAllTeams = asyncHandler(async(req, res) => {
     }
 });
 
-function titleCase(teamName: any) : string {
-    /**
-     * Function to convert a string to title case
-     * 
-     * @remarks
-     * This function is used to convert a team name to title case (i.e. "alabama" -> "alabama")
-     * 
-     * @params teamName - The team name that the user wants to convert to title case
-     * @returns The team name in title case
-     */
-    teamName = teamName.toLowerCase().split(' ');
-    for (var i = 0; i < teamName.length; i++) {
-        teamName[i] = teamName[i].charAt(0).toUpperCase() + teamName[i].slice(1); 
-    }
-    return teamName.join(' ');
-}
-
 const findTeamByName = asyncHandler(async(req, res) => {
     /**
      * Function to find a team by its name
@@ -120,8 +91,7 @@ const findTeamByName = asyncHandler(async(req, res) => {
     try {
         var {teamName} = req.params;
         // Encode the name again, in case for some reason it is not encoded
-        teamName = encodeURI(teamName);
-        teamName = teamName.replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/&/g, '%26');
+        teamName = encodeTeamName(teamName);
         var theTeam = await Team.find({"school_id": teamName}, {_id: 0, __v: 0});
         if (theTeam.length === 0) {
             res.status(400).json({error: "The team with the school_id " + teamName + " is not in the database. Please try another team."});
@@ -214,32 +184,19 @@ const compareTwoTeams = asyncHandler(async(req, res) => {
     try {
         var teamOneName: string = req.params['team1'];
         var teamTwoName: string = req.params['team2'];
-        const teamOneNameNoUnderscores = teamOneName.replace(/_/g, " ");
-        const properTeamOneName = titleCase(teamOneNameNoUnderscores);
-        const properTeamOneNameUpper = properTeamOneName.toUpperCase();
-
-        const teamTwoNameNoUnderscores = teamTwoName.replace(/_/g, " ");
-        const properTeamTwoName = titleCase(teamTwoNameNoUnderscores);
-        const properTeamTwoNameUpper = properTeamTwoName.toUpperCase();
-
-        // TODO: Make this code leaner
-        if (!teamExists(properTeamOneName) && !teamExists(properTeamTwoName) && !teamExists(properTeamOneNameUpper) && !teamExists(properTeamTwoNameUpper)){
-            res.status(400).json({error: properTeamOneName + " and " + properTeamTwoName + " are not in the database of teams. Please use two different teams."});
-        } else if (!teamExists(properTeamOneName) && !teamExists(properTeamOneNameUpper)) {
-            res.status(400).json({error: properTeamOneName + " is not in the database of teams. Please try another team."});
-        } else if (!teamExists(properTeamTwoName) && !teamExists(properTeamTwoNameUpper)) {
-            res.status(400).json({error: properTeamTwoName + " is not in the database of teams. Please try another team."});
-        };
+        teamOneName = encodeTeamName(teamOneName);
+        teamTwoName = encodeTeamName(teamTwoName);
         const bothTeams = await Team.find({
-            "school_name": {
+            "school_id": {
                 $in : [
-                    properTeamOneName,
-                    properTeamTwoName,
-                    properTeamOneNameUpper,
-                    properTeamTwoNameUpper
+                    teamOneName, 
+                    teamTwoName
                 ]
             }
         }, {_id: 0, __v: 0});
+        if (bothTeams.length < 2 || bothTeams.length === 0) {
+            res.status(400).json({error: "One or both of the teams are not in the database of teams. Please try another team."});
+        }
         res.status(200).json(bothTeams);
     } catch (error) {
         res.status(500);
