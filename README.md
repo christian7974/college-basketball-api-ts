@@ -362,7 +362,6 @@ letting them know that fouls is not a statistic stored for the teams.
 Within the code, there are some comments labeled TODO - those are features that I plan on adding to the API, but some of the notable ones are:
 - Add Women's NCAA D1 Team statistics
 - When sorting teams, showing only the first N results
-- Allow the user to compare N teams when using the comparison endpoint
 - Query for teams with stats over a certain amount, under a certain amount or between two amounts
 - Possible Chrome Extension that shows the stats of the teams when clicking on the matchups (allowing for better analysis of games)
 - Come up with a formula that produces a number on the team most likely to win a matchup (great for quick selections)
