@@ -1,10 +1,13 @@
 import asyncHandler from "express-async-handler"
 import Team from '../models/teamModel';
 import TeamsList from '../teams_list';
-import { IndividualTeam, Order, Extreme } from '../types';
+import { IndividualTeam, Order, Extreme, ErrorMessage } from '../types';
 import teamsList from "../teams_list";
-import { encode } from "punycode";
+
 const arrayOfStats = ['school_name', 'school_id', 'g', 'wins', 'losses', 'win_loss_pct', 'srs', 'sos', 'wins_conf', 'losses_conf', 'wins_home', 'losses_home', 'wins_visitor', 'losses_visitor', 'pts', 'opp_pts', 'mp', 'fg', 'fga', 'fg_pct', 'fg3', 'fg3a', 'fg3_pct', 'ft', 'fta', 'ft_pct', 'orb', 'trb', 'ast', 'stl', 'blk', 'tov', 'pf'];
+const [databaseErrorMessage, databaseErrorCode]: [string, number] = 
+    ["There was an error connecting with the database. Check the README to ensure that the API is up and running", 
+        500];
 
 const statExists = function(inputtedStat: string): boolean {
     /**
@@ -42,7 +45,11 @@ const addAllTeams = asyncHandler(async(_, res) => {
         await Team.create(TeamsList); // Add every team into the database
         res.status(200).send("You have inserted all of the teams!");
     } catch (error) {
-        res.status(500);
+        res.status(500).json({
+            message: databaseErrorMessage,
+            code: databaseErrorCode,
+            endpoint: "/all"
+        } as ErrorMessage);
     }
 });
 
@@ -59,7 +66,11 @@ const clearDatabase = asyncHandler(async(_, res) => {
         await Team.deleteMany({}); // Remove every team from the database
         res.status(200).send("You have deleted all of the teams!");
     } catch (error) {
-        res.status(500);
+        res.status(500).json({
+            message: databaseErrorMessage,
+            code: databaseErrorCode,
+            endpoint: "/"
+        } as ErrorMessage);
     }
 });
 
@@ -76,7 +87,10 @@ const showAllTeams = asyncHandler(async(req, res) => {
         const allTeams: IndividualTeam[] = await Team.find({}, {_id: 0, __v: 0});
         res.status(200).json(allTeams);
     } catch (error) {
-        res.status(500);
+        res.status(500).json({
+            message: databaseErrorMessage,
+            code: databaseErrorCode,
+        });
     }
 });
 
@@ -96,11 +110,19 @@ const findTeamByName = asyncHandler(async(req, res) => {
         teamName = encodeTeamName(teamName);
         var theTeam = await Team.find({"school_id": teamName}, {_id: 0, __v: 0});
         if (theTeam.length === 0) {
-            res.status(400).json({error: "The team with the school_id " + teamName + " is not in the database. Please try another team."});
+            res.status(400).json({
+                message: "The team you are looking for does not exist in the database.",
+                code: 400,
+                endpoint: "/one/" + teamName
+            } as ErrorMessage);
         }
         res.status(200).json(theTeam[0]); // The [0] is so the client has a single JSON instead of an array with only one JSON in it
     } catch (error) {
-        res.status(500);
+        res.status(500).json({
+            message: databaseErrorMessage,
+            code: databaseErrorCode,
+            endpoint: "/one/" + req.params['teamName']
+        } as ErrorMessage);
     }
 });
 
@@ -119,7 +141,12 @@ const sortTeams = asyncHandler(async(req, res) => {
         const statToSortBy: string = req.params['stat'];
         const order: string = req.params['order'].toString();
         if (!statExists(statToSortBy)) {
-            res.status(400).json({error: statToSortBy + " is not a valid statistic to sort by. Please use another statistic."});
+            res.status(400).json(
+                {
+                    message: statToSortBy + " is not a valid statistic. Please refer to the documentation to find a proper statistic.",
+                    code: 400,
+                    endpoint: "/sort/" + statToSortBy + "/" + order
+                } as ErrorMessage);
         }
         let valToSort: Order;
         if (order === "asc") {
@@ -127,13 +154,21 @@ const sortTeams = asyncHandler(async(req, res) => {
         } else if (order === "des"){
             valToSort = Order.des;
         } else {
-            res.status(400).json({error: order + " is not a valid order. Please use either asc or des."});
+            res.status(400).json({
+                message: order + " is not a valid order. Please use either asc for ascending or des for descending.",
+                code: 400,
+                endpoint: "/sort/" + statToSortBy + "/" + order
+            } as ErrorMessage);
             return;
         }
         const sortedJSON = await (Team.find({}, {_id: 0, __v: 0}).sort({[statToSortBy]: valToSort}));
         res.status(200).json(sortedJSON);
     } catch (error) {
-        res.status(500);
+        res.status(500).json({
+            message: databaseErrorMessage,
+            code: databaseErrorCode,
+            endpoint: "/sort/" + req.params['stat'] + "/" + req.params['order']
+        } as ErrorMessage);
     }
 });
 
@@ -150,11 +185,15 @@ const getExtreme = asyncHandler(async(req, res) => {
     try {
         const statToGetExtremeOf: string = req.params['stat'];
         if (!statExists(statToGetExtremeOf)) {
-            res.status(400).json({error: statToGetExtremeOf + " is not a valid statistic. Please refer to documentation to find a proper statistic."});
+            res.status(400).json({
+                message: statToGetExtremeOf + " is not a valid statistic. Please refer to the documentation to find a proper statistic.",
+                code: 400,
+                endpoint: "/extreme/" + statToGetExtremeOf + "/most"
+            } as ErrorMessage
+            );
         };
         const whichExtreme = req.params['whichExtreme'].toString();
         const numExtreme: number = +req.params['numExtreme'] || 1;
-        console.log(numExtreme);
         numExtreme > teamsList.length && res.status(400).json({error: "The number of teams you want to find is greater than the number of teams in the database."});
 
         var extremeSide: Extreme;
@@ -163,14 +202,22 @@ const getExtreme = asyncHandler(async(req, res) => {
         } else if (whichExtreme == "most"){
             extremeSide = Extreme.most;
         } else {
-            res.status(400).json({error: whichExtreme + " is not a valid extreme. Please use either most for the highest or least for the lowest."});
+            res.status(400).json({
+                message: whichExtreme + " is not a valid extreme. Please use either most for the most of a statistic or least for the least of a statistic.",
+                code: 400,
+                endpoint: "/extreme/" + statToGetExtremeOf + "/" + whichExtreme
+            } as ErrorMessage);
             return;
         }
 
         const theTeam = await (Team.find({}, {_id: 0, __v: 0}).sort({[statToGetExtremeOf] : extremeSide}).limit(numExtreme));
         numExtreme === 1 ? res.status(200).json(theTeam[0]) : res.status(200).json(theTeam); // The [0] is so this sends a single JSON instead of an array containing one JSON
     } catch (error) {
-        res.status(500);
+        res.status(500).json({
+            message: databaseErrorMessage,
+            code: databaseErrorCode,
+            endpoint: "/extreme/" + req.params['stat'] + "/" + req.params['whichExtreme']
+        } as ErrorMessage);
     }
 });
 
@@ -188,15 +235,28 @@ const compareMultipleTeams = asyncHandler(async(req, res) => {
     try {
         const teams = req.query.teams;
         if (!teams) {
-            res.status(400).json({error: "Please input at least two teams to compare."});
+            res.status(400).json({
+                message: "You must provide two teams to compare.",
+                code: 400,
+                endpoint: "/compare?teams="
+            });
         }
         const teamsArray = Array.isArray(teams) ? teams : [teams];
         const decodedTeamsArray = teamsArray.map(team => encodeTeamName(team as string));
         const foundTeams = await Team.find({"school_id": {$in: decodedTeamsArray}}, {_id: 0, __v: 0});
-        
+
+        foundTeams.length != teamsArray.length && res.status(400).json({
+            message: "One or more of the teams you provided does not exist in the database.",
+            code: 400,
+            endpoint: "/compare?teams=" + teamsArray.join("&teams=")
+        } as ErrorMessage);
         teamsArray.length < 2 ? res.status(200).json(foundTeams[0]) : res.status(200).json(foundTeams);
     } catch (error) {
-        res.status(500);
+        res.status(500).json({
+            message: databaseErrorMessage,
+            code: databaseErrorCode,
+            endpoint: "/compare?teams=" + req.query.teams
+        });
     }
 });
 

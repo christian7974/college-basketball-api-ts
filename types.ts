@@ -44,3 +44,8 @@ export enum Extreme {
     "most" = -1
 }
 
+export type ErrorMessage = {
+    message: string;
+    code: number;
+    endpoint: string;
+}

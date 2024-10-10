@@ -332,17 +332,28 @@ and the outcome would be:
 ]
 ```
 
-# Handling Errors
-When using this API, you may mispell a team name (Orel Roberts vs Oral Roberts) or try to find a stat that is not accounted for (for instance, OREB% or FPG). If that is the case, a JSON object will be sent to the user that has a key called "error" that has a value with the error message. This allows for people using the API to easily see what went wrong when using that endpoint and to display that error if someone using their app tries to make an invalid request. 
+# Handling Errors & A Note on Error Messages.
+When using this API, you may mispell a team name (Orel Roberts vs Oral Roberts) or try to find a stat that is not accounted for (for instance, OREB% or FPG). If that is the case, a JSON object will be sent to the user that has the following structure:
+```JSON
+{
+	"message": "A brief description about what went wrong (i.e. a team was not found, an invalid statistic was entered, etc.)",
+	"code": "A number representing the error code (most likely 400, but 500 if the API cannot connect to the database)",
+	"endpont": "The endpoint that resulted in the error (to help the user figure out what went wrong when using the API)"
+}
+```
+
+This allows for people using the API to easily see what went wrong when using that endpoint and to display that error if someone using their app tries to make an invalid request. 
 
 For instance, if you tried to use this endpoint (notice the two teams that are being compared):
 ```
-https://college-basketball-api-ts.onrender.com/multiple?teams=road_island&teams=gonzaguh
+https://college-basketball-api-ts.onrender.com/multiple?teams=road%20island&teams=gonzaguh
 ```
 you would get the following JSON:
 ```JSON
 {
-	"error": "Road Island and Gonzaguh are not in the database of teams. Please use two different teams."
+	"message": "One or more of the teams you provided does not exist in the database.",
+	"code": 400,
+	"endpoint": "/compare?teams=road_island&teams=gonzaguh"
 }
 ```
 alerting you that those teams do not exist in the database. If you tried using this endpoint:
@@ -352,7 +363,9 @@ https://college-basketball-api-ts.onrender.com/extreme/fouls/most
 the following JSON would be sent to the client:
 ```JSON
 {
-	"error": "fouls is not a valid statistic. Please refer to documentation to find a proper stat."
+	"message": "fouls is not a valid statistic. Please refer to the documentation to find a proper statistic.",
+	"code": 400,
+	"endpoint": "/extreme/fouls/most"
 }
 ```
 letting them know that fouls is not a statistic stored for the teams.
