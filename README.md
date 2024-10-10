@@ -1,5 +1,5 @@
 # College Basketball API (Now in TS)
-
+![Static Badge](https://img.shields.io/badge/currently-running-green)
 # Table of Contents
 1. [Features/Functionality](#featuresfunctionality)
 2. [Table of Statistics](#table-of-statistics)
@@ -12,7 +12,7 @@ This is an API that has the 2023-2024 Statistics of every NCAA DI Men's Basketba
 
 I wanted to make an API that was easy to use and had ample documentation so that someone who is unfamiliar with using an API can feel comfortable using it and get as much out of it as someone who is technically literate. If anything in the documentation is unclear (such as how to use a feature or how to read an error message), please create an issue with your question and I would be happy to help (or someone else may get to help before I can). 
 
-This is the **third** iteration of the project, where the project is now written in Typescript and the problem with querying teams with symbols in their names has been resolved.
+This is the **third** iteration of the project, where the project is now written in Typescript and the problem with querying teams with symbols in their names has been resolved. The badges in the README are from [shields.io](https://shields.io/).
 
 This project was made using Typescript, Node.js, Express, Mongoose/MongoDB and hosted on Render. The website scraped was [Basketball Reference](https://www.sports-reference.com/cbb/seasons/men/2024-school-stats.html#basic_school_stats), which is a website that I use a lot to settle sports arguments.
 
@@ -332,7 +332,8 @@ and the outcome would be:
 ]
 ```
 
-# Handling Errors & A Note on Error Messages.
+# Handling Errors
+## A Note on Error Messages
 When using this API, you may mispell a team name (Orel Roberts vs Oral Roberts) or try to find a stat that is not accounted for (for instance, OREB% or FPG). If that is the case, a JSON object will be sent to the user that has the following structure:
 ```JSON
 {
